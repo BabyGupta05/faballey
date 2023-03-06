@@ -1,0 +1,187 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif
+}
+#login{
+    padding:15px 25px;
+    border: none;
+    border-radius: 8px;
+}
+
+
+#login_popup{
+    width: 100%;
+  background: #fff;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   padding: 50px;
+  max-width: 500px;
+   box-sizing: border-box;
+   padding: 50px;
+   z-index: 99;
+    border-radius: 5px;
+   transform: translate(-50%,-50%);
+   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+#login_popup>h3{
+   font-weight: 600;
+   line-height: normal;
+    color: rgb(0, 0, 0);
+   font-size: 24px;
+   padding-bottom: 15px;
+   text-transform: uppercase;
+}
+#login_popup>p:nth-child(2){
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+color: rgb(38, 37, 37);
+}
+#login_popup img{
+max-width: 140px;
+width: 100%;
+display: inline-block;
+margin: 0 2px;
+cursor: pointer;
+    }
+
+#login_line{
+content: "";
+background: #dcdcdc;
+width: 90%;
+margin-left: 5%;
+margin-top: 40px;
+height: 1px;
+top: 50%;
+left: 0;
+}
+h5{
+position: relative;
+font-size: 13px;
+font-weight: bold;
+line-height: 4px;
+}
+
+#login_popup input{
+font-size: 13px;
+font-weight: 540;
+line-height: 20px;
+border: 1px solid #ececec;
+padding: 20px;
+width: 100%;
+box-sizing: border-box;
+margin-bottom: 10px;
+color: #6d6d6d;
+}
+
+#login_popup input:focus{
+    outline: none;
+}
+#login_btn,#OTP_btn,.otp_btn{
+ width: 100%;
+background: #fc6486;
+color: #fff;
+font-size: 13px;
+font-weight: 600;
+text-align: center;
+padding: 20px 0;
+text-transform: uppercase;
+margin-top: 30px;
+display: block;
+border: none;
+cursor: pointer;
+}
+#login_btn,#OTP_btn{
+    outline: none;
+}
+h5>span{
+  position: relative;
+background: #fbfbfb;
+padding: 0 5px;
+font-size: 14px;
+font-weight: 500;
+margin-left: 125px;
+}
+#login_fg{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#login_skip{
+    text-decoration:none ;
+    color: #A5A5A5;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+     margin-top: 35px;
+     display: block;
+}
+p+#close{
+position: absolute;
+ right: 10px;
+top: 0px;
+color: #000;
+cursor: pointer;
+border: 1px solid black;
+padding:4px 8px;
+border-radius: 90%;
+}
+
+#ph_number+span,#OTP+span,#OTP_enterd+span,#OTP+span{
+    font-size: 12px;
+    color: #FF0000;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 18px;
+}
+#mail_sent{
+    font-size: 12px;
+    color: green;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 18px;
+}
+#box{
+    display: none;
+   background-color: rgba(0,0,0,0.2);
+   /* margin-top:-50px ; */
+   height: 100vw;
+   width: 100%;
+    z-index:1;
+    position: fixed;
+   top: 50%;
+   left: 50%;
+   box-sizing: border-box;
+   z-index: 9;
+    /* border-radius: 5px; */
+   transform: translate(-50%,-50%);
+}
+
+
+/* OTP */
+
+.otp a,#forgot_pass{
+    color: #fc6486;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+}
+#otp_forgot{
+    display: flex;
+    justify-content: space-between;
+}
+#otp_forgot>div{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+}
+#otp_forgot>div input{
+    width: 15px;
+}
