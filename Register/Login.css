@@ -147,7 +147,7 @@ border-radius: 90%;
     line-height: 18px;
 }
 #box{
-    display: none;
+    /* display: none; */
    background-color: rgba(0,0,0,0.2);
    /* margin-top:-50px ; */
    height: 100vw;

@@ -1,7 +1,7 @@
 import PassPage from "./otp.js";
 import {otpPage,loginPage} from "./otp.js";
 document.getElementById("login_btn").addEventListener("click",verify)
-
+document.getElementById("box").style.display="none"
 
 // Registraion/Login
 
@@ -9,11 +9,9 @@ function verify(){
     let user = JSON.parse(localStorage.getItem("user-list")) || []
     let Otp ="",password="";
     let str ="ABCDEFGHIJKLMNOPQRSTUYWXYZ0123456789abcdefghijklmnopqrstuvwxyz"
-    for(let i=0; i<4; i++)
-      Otp += Math.floor(Math.random()*10)+1;
-    for(let i=0; i<6; i++)
-    password+=str.charAt(Math.floor(Math.random()*str.length));
-     console.log(password)
+    for(let i=0; i<4; i++) Otp += Math.floor(Math.random()*10);
+    for(let i=0; i<6; i++) password+=str.charAt(Math.floor(Math.random()*str.length));
+     console.log(Otp,password)
 
 
     let input = document.getElementById("ph_number").value;
@@ -48,7 +46,12 @@ function verify(){
 //    New User's
    if(c==0){
     if(input.includes("@gmail.com")){
-        
+        console.log(Otp)
+        document.getElementById("box").innerHTML=PassPage()
+        document.getElementById("box").style.display = "block"
+        document.getElementById("mail").innerText = input
+        document.getElementById("OTP").innerText = input
+       document.querySelector("#mail_sent").style.display="block"
         //  email for new user
         Email.send({
             SecureToken : "dc989647-f40e-45dc-b708-b7b85e1361bf",
@@ -87,11 +90,7 @@ function verify(){
         user.push(obj)
         localStorage.setItem("user-list",JSON.stringify(user));
         localStorage.setItem("login",input)
-        console.log(Otp)
-        document.getElementById("box").innerHTML=PassPage()
-        document.getElementById("box").style.display = "block"
-        document.getElementById("mail").innerText = input
-       document.querySelector("#mail_sent").style.display="block"
+    
           }else{
             alert(message)
           }
@@ -125,17 +124,21 @@ function verify(){
 // password verify or OTP verify
 let login_btn = document.getElementById("login_btn") || document.getElementById("OTP_btn")
 login_btn.addEventListener("click",passValidation)
+console.log(Otp)
+
 
 function passValidation(){
-
     // password
     let wrong_pass = document.querySelector("#OTP+span")
     let enterd_pass = document.getElementById("OTP").value;
     let flag=false;
+    console.log("pass valid...",enterd_pass)
     user.map(function(ele){
+   
         if((ele.mail==input&&ele.Password==enterd_pass) || (ele.ph==input&&ele.Password==enterd_pass)){
             console.log("succfull login...",ele.Password,enterd_pass)
             flag=true;
+            return;
         }
     })
 
