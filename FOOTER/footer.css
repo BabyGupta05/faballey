@@ -1,0 +1,153 @@
+#footer {
+    padding-left: 180px;
+    padding-right: 190px;
+}
+
+.borderFun {
+    width: 100%;
+    height: 0.1px;
+    background-color: #d2d2d2;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.borderFun1 {
+    width: 53%;
+    height: 0.1px;
+    background-color: #d2d2d2;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: auto;
+}
+
+
+.borderFunHorizontal {
+    border-left: 0.5px solid #d2d2d2;
+    height: 200px;
+}
+
+/* setion1......__________________ */
+#aboutFaballey > div{
+margin-bottom: -40px;
+}
+/* setion2......__________________ */
+#img_DownloadApp {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#img_DownloadApp_1 {
+    width: 75%;
+    align-items: center;
+}
+
+#img_DownloadApp_2 {
+    width: 25%;
+    text-align: center;
+}
+
+#img2 {
+    margin-left: 25px;
+}
+
+#quality_Image {
+    width: 850px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+/* section 3........________________________________ */
+#company_help_newsletter {
+    display: flex;
+    width: 100%;
+}
+
+#help_lists {
+    display: flex;
+}
+#company_head {
+    width: 20%;
+}
+#company_head h4{
+    margin-bottom: 35px;
+}
+#company_help_newsletter p{
+    line-height: 10px;
+}
+#help_helpHeading{
+    width: 45%;
+}
+#help_helpHeading div{
+    padding-left: 40px;
+}
+#help_helpHeading h4{
+text-align: center;
+}
+#newsletter_connect{
+width: 35%;
+}
+#newsletter_connect div{
+width: 100%;
+text-align:  center;
+}
+#newC_4 img{
+    height: 30px;
+    width: 40px;
+    padding: 5px;
+}
+#input_email{
+    height: 30px;
+    width: 260px;
+}
+#email_subscribe{
+    height: 36px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+#newC_3{
+    margin-top: 35px;
+    margin-bottom: -15px;
+}
+
+/* section 4........________________________________ */
+#contactUs_div2{
+    display: flex;
+    width: 100%;
+}
+#contactUs_div2 p{
+    line-height: 10px;
+    font-size: 17px;
+}
+#contactUs_div2 h4{
+    margin-bottom: 35px;
+}
+#office_address{
+    width: 36%;
+}
+
+#return_address{
+    width: 32%;
+    padding-left: 100px;
+}
+
+#payment_methods{
+    width: 32%;
+    padding-left: 70px;
+}
+/* section 5........________________________________ */
+
+#popular_search > p{
+    font-size: 17px;
+    line-height: 30px;
+    word-spacing: 1px;
+}
+/* last section.........______________________________ */
+#reservedRights {
+    text-align: center;
+}
