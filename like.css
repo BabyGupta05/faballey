@@ -1,0 +1,48 @@
+.like-button .heart-icon {
+    height: 100px;
+    width: 100px;
+    background: url("/faballey/images/heart.png");
+    background-position: left;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  .like-button .heart-icon.liked {
+    animation: like-anim 0.7s steps(28) forwards;
+  }
+  
+  @keyframes like-anim {
+    to {
+      background-position: right;
+    }
+  }
+  
+  
+  .like-button .heart-bg {
+    background: rgba(255, 192, 200, 0);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+  }
+  
+  /* .like-button .heart-bg:hover {
+    background: rgba(255, 192, 200, 0.7);
+  } */
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-button .likes-amount {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #888;
+    font-weight: 900;
+    margin-left: 6px;
+  }
+  

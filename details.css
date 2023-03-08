@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    cursor: pointer;
+}
+#details-container{
+    display: flex;
+
+}
+#details-container #image-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    margin: 50px;
+   
+}
+.icondiv{
+    display: flex;
+    margin: 10px;
+}
+#right-container{
+    margin-top: 45px;
+    line-height: 30px;
+
+}
+.size{
+    display: flex;
+    justify-content: space-between;
+}
+.size-button{
+    padding: 19px;
+    margin: 20px;
+    margin-left: 0px;
+    border: none;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.295);
+}
+.size-button:hover{
+    background-color: black;
+    color: white;
+}
+.size-button:focus{
+    background-color: black;
+    color:white;
+}
+
+.add-button{
+    width: 215px;
+    padding: 15px;
+    margin: 20px;
+    margin-left: 0px;
+}
+.add-button:first-child{
+    background-color: rgb(252,100,134);
+    border: none;
+    color: white;
+}
+.add-button:last-child{
+    background-color: rgb(255,255,255);
+    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.295);
+}
+.pincode-input{
+    padding: 15px;
+    margin: 10px;
+    margin-left: 0px;
+    
+}
+.pincode-input:first-child{
+    width: 340px;
+    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.205);
+    font-size: 18px;
+}
+.pincode-input:first-child:focus{
+    outline: none;
+}
+.pincode-input:last-child{
+    margin-left: -10px;
+    border: none;
+    background-color:rgb(255,255,255) ;
+    color: rgb(252,100,134);
+    border: 1px solid rgba(128, 128, 128, 0.185);
+    border-left: 1px solid rgba(0, 0, 0, 0.384);
+    height: 54px;
+}
+
+.cod-button{
+    padding: 13px;
+    margin: 14px;
+    margin-left: 0px;
+    width: 143px;
+    border: none;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+}
+.avality-checkbox{
+    font-size: 13px;
+    margin: 10px;
+    margin-left: 0px;
+    text-decoration: underline;
+}
+
+.descdiv{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 15px;
+    margin-left: -10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.534);
+  
+}
+.detaildiv{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 15px;
+    margin-left: -10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.534);
+  
+}
+.shipingdiv{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 15px;
+    margin-left: -10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.534);
+}
+#social i{
+    font-size: 25px;
+    margin: 10px;
+    margin-top: -90px;
+    margin-left: 0px;
+}
+#social i:first-child{
+    color: rgb(60,176,92);
+}
+#social i:nth-child(2){
+    color: rgb(209,56,131);
+}
+#social i:nth-child(3){
+    color:rgb(93,133,215);
+}
+#social i:last-child{
+    color:rgb(230,0,35);
+}
+
+
