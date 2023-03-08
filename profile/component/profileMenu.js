@@ -15,7 +15,7 @@
               <a href="./Myorder.html"><i class="fa fa-bag-shopping"></i> My Orders</a>
             </li>
             <li>
-              <a href=""><i class="fa fa-heart"></i> My Wishlist</a>
+              <a href="./MyWishlist.html"><i class="fa fa-heart"></i> My Wishlist</a>
             </li>
             <li>
               <a href="./Mycredit.html"><i class="fa fa-wallet"></i> My Credits</a>
@@ -27,7 +27,7 @@
               <a href="./Myaddress.html"><i class="fa fa-address-book"></i> My Addresses</a>
             </li>
             <li>
-              <a href=""><i class="fa fa-headset"></i> Contact Us</a>
+              <a href="./ContactUs.html"><i class="fa fa-headset"></i> Contact Us</a>
             </li>
             <li>
               <a href=""

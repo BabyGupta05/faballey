@@ -105,7 +105,7 @@
    margin: 2% 0% 2% 2%;
    position: sticky;
   }
-  .profile-right-address-section,.profile-right-info-section,.profile-right-order,.profile-right-credit-section,.profile-right-voucher{
+  .profile-right-address-section,.profile-right-info-section,.profile-right-order,.profile-right-credit-section,.profile-right-voucher,.profile-right-wishlist-productDetails,.contact-details{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
     overflow: hidden;
@@ -113,6 +113,7 @@
   }
   .profile-right-address-section>div,.profile-info-address-section>label,input,button{
     display: flex;
+    overflow: hidden;
   }
   #user-email,#country,#user-phoneNo,.button-section> button{
     padding: 15px;
@@ -120,6 +121,7 @@
     font-weight: 700;
     border: 1px solid #f2f2f2;
     pointer-events:none;
+    overflow: hidden;
   }
   
   #user-email{
@@ -138,6 +140,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   overflow: hidden;
   }
   .button-section> button {
     background-color: #FF8BA5;
@@ -147,7 +150,9 @@
     width: 100%;
     text-align: center;
     display: inline-block;
+    overflow: hidden;
   }
+
   .button-section> button:hover{
     cursor: pointer;
   }
@@ -157,18 +162,19 @@
    .button-section> button> #address-update,info-update{
     width: 60%;
   }
-  .button-section> button>address-cancle,#info-cancel{
+  .button-section> button>#address-cancle,#info-cancel{
     width: 40%;
     background-color: #f4f4f4;
     color: #323232;
     
   }
+
   .profile-right-info-section>label{
     color: #9a9a9a;
     margin: 15px -5px;
     padding: 15px;
   }
-  .profile-right-info-section>input,button,select,.gender-section>button{
+  .profile-right-info-section>input,button,#country,.gender-section>button,#wishList-size{
     padding: 15px;
     margin:10px ;
     font-weight: 700;
@@ -224,6 +230,8 @@
   display: flex;
   margin: -8px 10px;
   pointer-events:none;
+  overflow: hidden;
+  
 }
 .primaryInfo>p:first-child{
   color: #9a9a9a;
@@ -303,6 +311,7 @@
   .creditBox p{
     font-size: 12px;
     font-weight: 600;
+    
   }
   .creditBox span{
     background: #323232;
@@ -316,12 +325,16 @@
     stroke-width: 1px;
   }
   .profile-right-section> p{
-    
+    overflow: hidden;
     width: 70%;
     font-size: 12px;
     margin: 10px 0px 0px;
     color: #000000;
     font-weight: 600;
+  }
+  .profile-right-voucher-header{
+    border-bottom: 1px solid #dcdcdc;
+    margin: 10px 0px;
   }
   .profile-right-voucher-header,.profile-right-voucher{
     display: flex;
@@ -360,9 +373,199 @@
     font-weight: 500;
     margin: 0%;
   }
-  .address-check > i{
+  #address-check {
     color: #FF8BA5;
+    width: 20px;
+    height: 20px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+    font-weight:bolder;
   }
-  .profile-right-Newaddress{
-    padding: 15px;
+ 
+  .profile-right-Newaddress {
+    width: 150%;
+    
+  }
+  
+  .profile-right-Newaddress> p#add-Address{
+    text-align: center;
+  }
+  .profile-right-Newaddress form{
+    border: 1px solid #f4f4f4;
+    margin: 15px;
+    padding:30px 15px;
+  }
+  .profile-right-Newaddress form>input,select{
+    border:1px solid red;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 7px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #808080;
+    
+  }
+  .profile-right-Newaddress form>input{
+    margin: 15px 0px 15px;
+  }
+ 
+  .profile-right-Newaddress form>input:focus{
+    outline: 1px solid transparent;
+  }
+  .profile-right-Newaddress form>span{
+    color: red;
+    display: block;
+    margin-top: -10px;
+  }
+ 
+
+  .profile-right-Newaddress form > div:first-of-type{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+  }
+  .profile-right-Newaddress form > div:first-of-type p{
+      margin: 20px 15px;
+      
+  }
+  #add-address-btn{
+    width: 50%;
+    margin: auto;
+  }
+  .profile-right-wishlist-headerBox{
+    width: 150%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 16px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 15px 0;
+    margin: 10px 0px;
+  }
+  .profile-right-wishlist-header{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .profile-right-wishlist-productDetails{
+    width: 145%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile-right-wishlist-image{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    
+  }
+  .profile-right-wishlist-image img{
+    width: 40%;
+    float: left;
+    border: 1px solid #e6e6e6;
+  }
+  .profile-right-wishlist-image p{
+    font-size: 15px;
+    font-weight:600;
+     margin: 25px 10px;
+     color: #323232;
+     overflow: hidden;
+  }
+  .profile-right-wishlist-Details{
+    width: 120%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    align-items: center;
+  }
+  .profile-right-wishlist-Details div{
+    width: 25%;
+    height: 30px;
+    margin-top: -50px;
+  }
+  #remove-wishlist{
+  margin: -40px 0px 0px 150px;
+  color: #999;
+  width: 20px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+  font-weight: bolder;
+  }
+  #addToBag{
+    background-color: #FF8BA5;
+    text-align: center;
+    color: white;
+    display: inline-block;
+
+  }
+  .addALLbtn{
+   width: 100%;
+   /* margin: 20px 130px; */
+   margin: 5% 28%;
+  }
+  .addALLbtn+p{
+    /* margin: 10px 345px; */
+    
+    margin:  2% 67%;;
+    font-size: 12px;
+  }
+  .contact-details{
+    width: 140%;
+  }
+  .contact-box{
+    margin-top: 20px;
+    
+  }
+
+  .title{
+    font-size: 15px;
+    color: #323232;
+  }
+  .content{
+    font-size: 13px;
+    color: #323232;
+  }
+
+  @media only screen and (max-width: 1150px) {
+    /* Medium Screen  */
+    .profile-right-wishlist-image{
+      flex-direction: column;
+    }
+    .profile-right-wishlist-image p{
+      margin: 10px 0px;
+      font-size: 12px;
+    }
+    .profile-right-wishlist-Details div p, select,button{
+      height: 20px;
+      
+    }
+    #remove-wishlist{
+      margin: -5px -20px 0px 10px;
+      color: #999;
+      }
+      
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* Small Screen  */
+    .profile-right-wishlist-image{
+      flex-direction: column;
+    }
+    .profile-right-wishlist-image p{
+      margin: 10px 0px;
+      font-size: 12px;
+    }
+    .profile-right-wishlist-Details div p, select,button{
+      height: 20px;
+    }
   }
