@@ -30,8 +30,10 @@
             <div id="links-accounts">
                 <a href="#" class="link">Track Order</a>
                 <a href="StoreLocator.html" class="link">| Store Locator</a>
-                <a href="login.html" class="link">| Login</a>
-                <a href="signup.html" class="link">| Sign up</a>
+                <div id="login_box">
+                    <a href="login.html" class="link">| Login</a>
+                    <a href="signup.html" class="link">| Sign up</a>
+                </div>
 
                 <a href="addToCart.html">| <img class="add-to-logo"
                         src="https://img.icons8.com/ios/50/000000/shopping-bag--v1.png" /></a>
@@ -889,7 +891,26 @@
 
 
     </div>
+    <div id="box" style="display: none;">
+        <div id="login_popup">
+            <h3>LOGIN OR SIGNUP</h3>
+            <p>for a quicker checkout</p>
+            <p id="close">&times;</p>
+            <input type="text" placeholder="Enter Mobile/Email" id="ph_number" />
+            <span style="display: none">Mobile/Email is required!</span>
+            <button id="login_btn">CONTINUE</button>
+            <h5 id="login_line"><span>Or continue with</span></h5>
+            <div id="login_fg">
+                <a href="#" id="l_fb"><img src="https://www.faballey.com/images/loginfb.png" alt="facebook" /></a>
+                <a href="#" id="l_google"><img src="https://www.faballey.com/images/logingogl.png" alt="google" /></a>
+            </div>
+            <a href="#" id="login_skip">skip</a>
+        </div>
+    </div>
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="module" src="index.js"></script>
+
+<script type="module" src="./Login.js"></script>
 
 </html>
-<script type="module" src="index.js"></script>
