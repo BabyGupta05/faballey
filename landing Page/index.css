@@ -88,6 +88,12 @@
     font-size: 12px;
     margin-left: -8px;
 }
+#profile_dropdown{
+    border: none;
+    font-size: 12px;
+   font-weight: bold;
+   margin:0px 3px ;
+  }
 
 /* 2nd navbar CSS....____________________________________________________________________ */
 #second_navbar {
