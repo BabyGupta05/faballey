@@ -90,6 +90,7 @@
 
 /* 2nd navbar CSS....____________________________________________________________________ */
 #second_navbar {
+    background-color: #fff;
     display: flex;
     height: 80px;
     justify-content: space-between;
