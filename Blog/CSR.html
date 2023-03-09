@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSR </title>
     <link rel="stylesheet" href="./CSR.css">
-
+    <link rel="stylesheet" href="./navbar.css">
 </head>
 
 <body>
+    <nav>
 
+    </nav>
     <!-- top banner -->
     <div id="csr">
         <figure class="top-st">
             <img src="https://www.faballey.com/images/csr/shrishtilogo.jpg" alt="">
         </figure>
-        <figure class="tp-banner">
-            <img src="https://www.faballey.com/images/csr/shrishtbanner.jpg" alt="">
+        <figure class="tp-banner-box">
+            <img src="https://www.faballey.com/images/csr/shrishtbanner.jpg" alt="" class="tp-banner">
         </figure>
     </div>
 
@@ -39,11 +41,11 @@
                     rural India.
                 </p>
                 <div id="p1-img">
-                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/6UHSz0avH-U"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe> -->
-                    <img src="https://i.ytimg.com/vi/ZPHbLBlYmXY/maxresdefault.jpg" alt="">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_VzK8D7wyns"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+                    <!-- <img src="https://i.ytimg.com/vi/ZPHbLBlYmXY/maxresdefault.jpg" alt=""> -->
                 </div>
 
             </div>
@@ -130,5 +132,10 @@
     </div>
 
 </body>
+<script type="module">
+    import navbar from "../Navbar/navbar.js"
+    console.log(navbar())
+    document.querySelector("nav").innerHTML = navbar()
+</script>
 
 </html>

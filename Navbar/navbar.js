@@ -16,9 +16,10 @@ function navbar(){
             <div id="links-accounts">
                 <a href="#" class="link">Track Order</a>
                 <a href="StoreLocator.html" class="link">| Store Locator</a>
-                <a href="login.html" class="link">| Login</a>
-                <a href="signup.html" class="link">| Sign up</a>
-
+                <div id="login_box">
+                <a href="#" id="login" class="link">| Login </a>
+                <a href="#" id="Signup" class="link">| Sign up </a>
+                </div>
                 <a href="addToCart.html">| <img class="add-to-logo"
                         src="https://img.icons8.com/ios/50/000000/shopping-bag--v1.png" /></a>
                 <div class="count">0</div>

@@ -20,7 +20,7 @@ body{
   max-width: 500px;
    box-sizing: border-box;
    padding: 50px;
-   z-index: 99;
+   z-index: 9999;
     border-radius: 5px;
    transform: translate(-50%,-50%);
    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */

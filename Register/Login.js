@@ -1,12 +1,65 @@
 import PassPage from "./otp.js";
 import {otpPage,loginPage} from "./otp.js";
-document.getElementById("login_btn").addEventListener("click",verify)
-document.getElementById("box").style.display="none"
+import navbar from "../Navbar/navbar.js"
 
+document.querySelector("nav").innerHTML=navbar();
+
+// Checking login ?
+let log_status = localStorage.getItem("logged") || "";
+console.log(log_status)
+if(log_status){
+    document.getElementById("login_box").innerHTML = `
+    <select name="" id="profile_dropdown" >
+                 <option value="account"><a href="#">My account</a> </option>
+                 <option value="order"><a href="#">My order</a></option>
+                 <option value="logout">Log out</option>
+               </select>`
+               document.getElementById("profile_dropdown").addEventListener("change",logout)
+}else{
+    document.getElementById("login_box").innerHTML = `
+    <a href="#" id="login" class="link">|  Login </a>
+    <a href="#" id="Signup" class="link">|  Sign up </a>`
+}
+
+// logout
+function logout(){
+    if(document.getElementById("profile_dropdown")){
+        console.log("ho....")
+       let value= document.getElementById("profile_dropdown").value
+        if(value == "logout"){
+            localStorage.setItem("logged","");
+            // window.location.href="index.html"
+        }
+    }
+}
+
+
+
+let user = [];
+let url = `https://test-api-y3sx.onrender.com/users`
+
+getdata(url)
+ async function getdata(url){
+   try {
+    let res = await fetch(url);
+    user = await res.json();
+    console.log(user)
+    document.getElementById("login_btn").addEventListener("click",function(){
+        verify(user)
+    })
+  } catch (error) {
+    console.log(error)
+}
+    }
+    console.log(user)
 // Registraion/Login
 
-function verify(){
-    let user = JSON.parse(localStorage.getItem("user-list")) || []
+
+function verify(user){
+    document.getElementById("box").style.display="block"
+
+
+    // OTP & PASSWORD Generate
     let Otp ="",password="";
     let str ="ABCDEFGHIJKLMNOPQRSTUYWXYZ0123456789abcdefghijklmnopqrstuvwxyz"
     for(let i=0; i<4; i++) Otp += Math.floor(Math.random()*10);
@@ -17,16 +70,25 @@ function verify(){
     let input = document.getElementById("ph_number").value;
     let size = input.length;
     let wrong_cred = document.querySelector("#ph_number+span")
+
    let obj = {
-    name : "",
+    firstName : "",
+    lastName:"",
+    Gender:"",
+    DOB:"",
     ph : "",
     mail : "",
     Password : "",
-    address: {}
+    login_status:false,
+    address: [],
+    cart:[],
+    wishList:[]
    }
+
+
   let c=0;
    if(input.includes("@gmail.com") || Number.parseInt(input)){
-
+console.log(user)
     // check existing customer
     user.filter(function(ele){
         if(ele.mail==input || ele.ph==input){
@@ -41,7 +103,7 @@ function verify(){
 
    }
 
-
+//////////////////erorr
 
 //    New User's
    if(c==0){
@@ -87,17 +149,32 @@ function verify(){
           if(message=="OK"){
             obj.mail = input;
         obj.Password=password;
-        user.push(obj)
+
+        // post new user
+        user.push(obj); postdata(obj)
         localStorage.setItem("user-list",JSON.stringify(user));
         localStorage.setItem("login",input)
+       
+       async function postdata(obj){
+       try {
+         let res = await fetch(`https://test-api-y3sx.onrender.com/users`,{
+            method:"POST",
+            headers:{
+            "Content-Type": "application/json"
+            },
+            body:JSON.stringify(obj),
+        })
+    } catch (error) {
+        console.log(error)
+    }
+       }
+
+        // window.location.href="index.html"
+        alert("Email sent Succefully..")
     
           }else{
             alert(message)
           }
-
-
-
-
           }
         );
 
@@ -108,6 +185,26 @@ function verify(){
         }else{
               obj.ph = input; obj.Password =password
               user.push(obj)
+
+
+              }
+            //   post data {number}
+            postdata(obj)
+            async function postdata(obj){
+                try {
+
+                    let res = await fetch(`https://test-api-y3sx.onrender.com/users`,{
+                        method:"POST",
+                        headers:{
+                        "Content-Type": "application/json"
+                        },
+                        body:JSON.stringify(obj),
+                    })
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+
               localStorage.setItem("user-list",JSON.stringify(user)); localStorage.setItem("login",input)
               wrong_cred.style.display = "none"
               document.getElementById("box").innerHTML=otpPage()
@@ -119,7 +216,8 @@ function verify(){
     }else{
         wrong_cred.style.display = "block"
     }
-}
+
+
 
 // password verify or OTP verify
 let login_btn = document.getElementById("login_btn") || document.getElementById("OTP_btn")
@@ -138,13 +236,34 @@ function passValidation(){
         if((ele.mail==input&&ele.Password==enterd_pass) || (ele.ph==input&&ele.Password==enterd_pass)){
             console.log("succfull login...",ele.Password,enterd_pass)
             flag=true;
+            localStorage.setItem("logged",`${ele.id}`)
+            postdata(ele)
+            async function postdata(ele){
+                try {
+
+                    let res = await fetch(`https://test-api-y3sx.onrender.com/users/2`,{
+                        method:"PATCH",
+                        headers:{
+                        "Content-Type": "application/json"
+                        },
+                        body:JSON.stringify({
+                            "login_status":true
+                        })
+                    })
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+
+
+            // window.location.href="index.html"
             return;
         }
     })
 
     if(!flag){
         wrong_pass.style.display="block"
-        console.log("invalid otp..!")
+        console.log("invalid Password")
     }
 
     //otp verify
@@ -152,10 +271,15 @@ function passValidation(){
         wrong_pass.style.display="none"
         console.log("succfull..by number", Otp,enterd_pass)
         alert(`Your Temporary password :- ${password}`)
+        localStorage.setItem("logged",true)
+        // window.location.href="index.html"
     }
 
 
 }
+
+
+
 document.getElementById("close").addEventListener("click",closePopup)
 
 function closePopup(){
@@ -165,13 +289,13 @@ function closePopup(){
 // show
 
 document.getElementById("login").addEventListener("click",showPopup)
+document.getElementById("Signup").addEventListener("click",showPopup)
 
 function showPopup(){
     document.getElementById("box").style.display = "block"
 }
 
 }
-
 
 // close 
 document.getElementById("login_skip").addEventListener("click",closePopup)
@@ -185,9 +309,11 @@ function closePopup(){
 // show
 
 document.getElementById("login").addEventListener("click",showPopup)
+document.getElementById("Signup").addEventListener("click",showPopup)
 
 function showPopup(){
     document.querySelector("#ph_number+span").style.display="none"
     document.getElementById("box").style.display = "block"
 }
+
 

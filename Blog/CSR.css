@@ -22,11 +22,15 @@ body {
 
 } */
 
-.tp-banner {
+.tp-banner-box{
     width: 80%;
     margin: auto;
 }
-
+.tp-banner{
+    width: 100%;
+    /* height: 10px; */
+    /* margin: 50px; */
+}
 #csr-container {
     display: flex;
     width: 80%;
@@ -133,7 +137,6 @@ text-transform: uppercase;
 #help-guide>div:last-child{
  display: flex;
  justify-content: space-around;
- /* padding: 0px 20px; */
 }
 #help-guide>div:last-child>div{
  width: 40%;
@@ -146,4 +149,14 @@ padding-bottom:20px;
 #help-guide>div:last-child p{
     font-size: 17px;
     line-height: 25px;
+}
+
+@media all and (max-width:700px){
+    #help-guide>div:last-child{
+        display: block;
+       }
+       #help-guide>div:last-child>div{
+         margin: auto;
+         width: 90%;
+       }
 }
