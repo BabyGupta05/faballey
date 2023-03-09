@@ -27,8 +27,33 @@
 
 /* setion1......__________________ */
 #aboutFaballey > div{
-margin-bottom: -40px;
-}
+    margin-bottom: -30px;
+    }
+    #aboutFaballey button{
+     color: #FC6486;
+     margin-top: -3px;
+     border: none;
+     background-color: white;
+     text-decoration: underline;
+    }
+    #readmore_btn{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #button_toreadmore:hover{
+        cursor: pointer;
+    }
+    #read_more{
+        display: none;
+    }
+    .read_para{
+        font-weight: bold;
+        font-size: 16px;
+    }
+    #aboutFaballey p{
+        font-size: 14px;
+        font-weight: lighter;
+    }
 /* setion2......__________________ */
 #img_DownloadApp {
     display: flex;
@@ -54,7 +79,7 @@ margin-bottom: -40px;
     width: 850px;
 }
 
-#footer a {
+#company_help_newsletter a {
     text-decoration: none;
     color: black;
     font-size: 17px;
