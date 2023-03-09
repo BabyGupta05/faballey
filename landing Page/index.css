@@ -1,0 +1,781 @@
+#navbar {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0%;
+}
+
+/* 1st navbar CSS__________________________________________________________________________________ */
+#first_navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%
+}
+
+#logo1 img {
+    height: 13px;
+    background-color: #000;
+    padding: 11px;
+    margin-top: -3px
+}
+
+
+#logo2 img {
+    height: 20px;
+    padding-left: 10px;
+    margin-right: 10px
+}
+
+#logo3 img {
+    height: 11px;
+    margin-left: 7px;
+    padding-bottom: 2px;
+
+
+}
+
+#partition_logo {
+    color: #ccc;
+    font-size: 38px;
+    margin-top: -15px;
+}
+
+#links-accounts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.link {
+    text-decoration: none;
+    color: #1e1d1d;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.add-to-logo {
+    height: 19px;
+}
+
+
+.count {
+    background-color: #ff69b4;
+    color: #fff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-left: -8px;
+}
+
+/* 2nd navbar CSS....____________________________________________________________________ */
+#second_navbar {
+    background-color: #fff;
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    color: black;
+    font-size: 13px;
+}
+
+#firstOf_secondnavbar {
+    display: flex;
+    width: 90%;
+    gap: 50px;
+
+}
+
+#logo4 {
+    width: 20%;
+    display: flex;
+    align-items: center;
+
+}
+
+#imgLogo {
+    height: 30px;
+
+}
+
+#ulList_div {
+    display: flex;
+}
+
+#ulList {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    align-items: center;
+}
+
+
+.options {
+    display: none;
+}
+
+#second_navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#search_amount_div {
+    display: flex;
+}
+
+#searchIcon {
+    margin-top: 33px;
+}
+
+#amount_select {
+    height: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+    border-color: rgb(175, 167, 167);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Media queries for both the navbars....................... */
+
+@media only screen and (max-width:1100px) {
+    #logo {
+        margin-left: 0%;
+    }
+
+    #search_amount_div {
+        width: 15%;
+    }
+
+    #ulList {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width:900px) {}
+
+@media only screen and (max-width:600px) {
+    #logo {
+        margin-left: 0%;
+    }
+
+    #first_navbar {
+        flex-direction: column;
+        align-items: start;
+        padding: 15px;
+    }
+
+    #second_navbar {
+        height: 125px;
+
+    }
+
+    #firstOf_secondnavbar {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    img#imgLogo {
+        margin-left: 12px;
+        padding: 5px;
+    }
+
+    #ulList {
+        gap: 8px;
+        padding-left: 4%;
+    }
+
+    #ulList_div {
+        width: 120%;
+    }
+
+    #searchIcon {
+        margin-top: 2px;
+    }
+
+    #amount_select {
+        margin-top: 2px;
+
+    }
+
+}
+
+/* _________________________________________ended Navbar CSS __________________________________________*/
+
+#footer {
+    padding-left: 180px;
+    padding-right: 190px;
+}
+
+.borderFun {
+    width: 100%;
+    height: 0.1px;
+    background-color: #d2d2d2;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.borderFun1 {
+    width: 53%;
+    height: 0.1px;
+    background-color: #d2d2d2;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: auto;
+}
+
+
+.borderFunHorizontal {
+    border-left: 0.5px solid #d2d2d2;
+    height: 200px;
+}
+
+/* setion1......__________________ */
+#aboutFaballey>div {
+    margin-bottom: -30px;
+}
+
+#aboutFaballey button {
+    color: #FC6486;
+    margin-top: -3px;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+}
+
+#readmore_btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#button_toreadmore:hover {
+    cursor: pointer;
+}
+
+#read_more {
+    display: none;
+}
+
+.read_para {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#aboutFaballey p {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+/* setion2......__________________ */
+#img_DownloadApp {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#img_DownloadApp_1 {
+    width: 75%;
+    align-items: center;
+}
+
+#img_DownloadApp_2 {
+    width: 25%;
+    text-align: center;
+}
+
+#img2 {
+    margin-left: 25px;
+}
+
+#quality_Image {
+    width: 850px;
+}
+
+#company_help_newsletter a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+/* section 3........________________________________ */
+#company_help_newsletter {
+    display: flex;
+    width: 100%;
+}
+
+#help_lists {
+    display: flex;
+}
+
+#company_head {
+    width: 20%;
+}
+
+#company_head h4 {
+    margin-bottom: 35px;
+}
+
+#company_help_newsletter p {
+    line-height: 10px;
+}
+
+#help_helpHeading {
+    width: 45%;
+}
+
+#help_helpHeading div {
+    padding-left: 40px;
+}
+
+#help_helpHeading h4 {
+    text-align: center;
+}
+
+#newsletter_connect {
+    width: 35%;
+}
+
+#newsletter_connect div {
+    width: 100%;
+    text-align: center;
+}
+
+#newC_4 img {
+    height: 30px;
+    width: 40px;
+    padding: 5px;
+}
+
+#input_email {
+    height: 30px;
+    width: 260px;
+}
+
+#email_subscribe {
+    height: 36px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#newC_3 {
+    margin-top: 35px;
+    margin-bottom: -15px;
+}
+
+/* section 4........________________________________ */
+#contactUs_div2 {
+    display: flex;
+    width: 100%;
+}
+
+#contactUs_div2 p {
+    line-height: 10px;
+    font-size: 17px;
+}
+
+#contactUs_div2 h4 {
+    margin-bottom: 35px;
+}
+
+#office_address {
+    width: 36%;
+}
+
+#return_address {
+    width: 32%;
+    padding-left: 100px;
+}
+
+#payment_methods {
+    width: 32%;
+    padding-left: 70px;
+}
+
+/* section 5........________________________________ */
+
+#popular_search>p {
+    font-size: 17px;
+    line-height: 30px;
+    word-spacing: 1px;
+}
+
+/* last section.........______________________________ */
+#reservedRights {
+    text-align: center;
+}
+
+/* _________________________________________ended Footer CSS __________________________________________*/
+
+/* __________SHOP SALE SHIPPING__________________ */
+
+#shop_sale_shipping {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#sss1 {
+    background-color: #FFE9E5;
+    width: 33%;
+    height: 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-top: 6px;
+}
+
+#sss2 {
+    background-color: #F8C9C8;
+    width: 34%;
+    height: 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-top: 6px;
+}
+
+#sss3 {
+    background-color: #FFE9E5;
+    width: 33%;
+    height: 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-top: 6px;
+}
+
+/* _________Slideshow container CSS____________________*/
+#shop_sale_shipping {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+#sss1 {
+    background-color: #FFE9E5;
+    width: 33%;
+    height: 25px;
+    padding-top: 2px;
+}
+
+#sss2 {
+    background-color: #F8C9C8;
+    width: 34%;
+    height: 25px;
+    padding-top: 2px;
+}
+
+#sss3 {
+    background-color: #FFE9E5;
+    width: 33%;
+    height: 25px;
+    padding-top: 2px;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    /* position: relative; */
+    margin-top: 6px;
+    margin-bottom: 26px;
+}
+
+.slideshow-container:hover {
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+#prev,
+#next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px;
+    color: rgb(247, 159, 174);
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: white;
+}
+
+#next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: 5px;
+}
+
+#prev {
+    margin-left: 5px;
+}
+
+#dot_div {
+    margin-top: -40px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 1px;
+    background-color: rgb(247, 159, 174);
+
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+} */
+
+/* @keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+} */
+/* __________________________main container CSS________________________________________ */
+#trending,
+#hotRN,
+#new_arrival,
+#deals_head,
+#spotlight {
+    width: 100%;
+    text-align: center;
+}
+
+#trending {
+    height: 50px;
+}
+
+#trending_imgs {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+#trending_imgs img {
+    width: 475px
+}
+
+#hotRN_imgs,
+#arrival_imgs,
+#curvy_queens {
+    width: 100%;
+}
+
+#hotRN_imgs img,
+#arrival_imgs img,
+#curvy_queens img {
+    width: 100%;
+
+}
+
+#instashop {
+    padding: 5px;
+}
+
+#insta_head {
+    width: 100%;
+    text-align: center;
+}
+
+#insta_imgages {
+    display: flex;
+}
+
+#insta_mainImg {
+    width: 34%;
+}
+
+#insta_mainImg img {
+    width: 100%;
+}
+
+#insta_gridImg {
+    width: 66%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+    padding: 0 10px 0 10px;
+}
+
+#insta_gridImg img {
+    width: 100%;
+    height: 240px;
+
+
+}
+
+#text_insta {
+    background-color: #FFE9E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text_insta a {
+    text-decoration: none;
+    font-size: large;
+    color: #000;
+}
+
+#deals_images,
+#spotlight_images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+#deals_images img,
+#spotlight_images img,
+#explore_images img {
+    width: 100%;
+}
+
+#video_faballey {
+    display: flex;
+    margin-top: 70px;
+    padding: 0 1px 0 10px;
+}
+
+#video_youtube {
+    width: 65%;
+    padding-right: 30px;
+}
+
+#video_text {
+    width: 35%;
+}
+
+#videoHeading {
+
+    margin: 0%;
+    letter-spacing: -2px;
+    padding-right: 180px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.border_videotext {
+    width: 33%;
+    height: 5px;
+    background-color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
+
+#video_text p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 0.5rem;
+    display: inline-block;
+    font-weight: 600;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+#video_para {
+    padding-right: 35px;
+    height: 300px;
+}
+
+#video_para button {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    display: inline-block;
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 17px;
+    background: #000;
+    color: #fff;
+    border-radius: 2rem;
+}
+
+#curvy_queens {
+    margin-top: 10px;
+}
+
+#explore_more h4 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#explore_more div {
+    width: 100%;
+    height: 25px;
+}
+
+#explore_more p {
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#explore_images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
