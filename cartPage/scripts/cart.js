@@ -92,6 +92,12 @@ let temp = [{
 
 let proctArray = JSON.parse(localStorage.getItem('mycart')) || [];
 
+proctArray.forEach(function (elem) {
+  elem.quantity = 1;
+});
+console.log(proctArray)
+localStorage.setItem("mycart", JSON.stringify(proctArray));
+
 async function getUser(){
   try {
     let user =await fetch(`https://test-api-y3sx.onrender.com/users/${id}`);
@@ -99,13 +105,13 @@ async function getUser(){
     // proctArray = userArr.cart;
     // console.log(userArr.cart);
     localStorage.setItem("mycart", JSON.stringify(userArr.cart))
-    displayCart(proctArray);
-    console.log(proctArray, "inside get")
+    // console.log(proctArray, "inside get")
   } catch (error) {
     console.log(error)
   }
 }
 getUser();
+displayCart(proctArray);
 
 console.log(proctArray,"outside")
 // let user = {
@@ -147,9 +153,7 @@ console.log(proctArray,"outside")
 
 // localStorage.setItem("mycart", JSON.stringify(temp));
 
-proctArray.forEach(function (elem) {
-  elem.quantity = 1;
-});
+
 
 
 

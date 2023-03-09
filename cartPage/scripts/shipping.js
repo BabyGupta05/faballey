@@ -10,16 +10,51 @@ document.querySelector("#child2 :nth-child(2) a").style.color = "#fc6486"
 document.querySelector("#child2 :nth-child(2) i").style.color = "#fc6486"
 
 
+let cartItems = document.getElementById('shpItemsMain');
+let subTotal = localStorage.getItem('local-subtotal');
+let proctArray = JSON.parse(localStorage.getItem('mycart')) || [];
 
-async function getCart(){
-    try {
-      let user =await fetch(`https://test-api-y3sx.onrender.com/users/${id}`);
-      let userArr =await user.json();
-      // console.log(proctArray, "inside get")
-      return userArr.cart;
-    } catch (error) {
-      console.log(error)
-    }
+console.log(proctArray)
+// async function getCart(){
+//     try {
+//       let user =await fetch(`https://test-api-y3sx.onrender.com/users/${id}`);
+//       let userArr =await user.json();
+//       // console.log(proctArray, "inside get")
+//       // return userArr.cart;
+//       displayCart(userArr.cart);
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   }
+//   getCart();
+displayCart(proctArray)
+
+  function displayCart(data){
+    cartItems.textContent = "";
+    data.map((ele, i)=>{
+     let prodWrapper = document.createElement("div");
+     prodWrapper.className = "prod-wrapper";
+
+      let img = document.createElement("img");
+      img.src = ele.img1;
+
+      let details = document.createElement('span');
+      let title = ele.title;
+      let br1 = document.createElement('br');
+      let SKU = `Sku : TOP05836B`
+      let br2 = document.createElement('br');
+      let Qty = `Qty : ${ele.quantity}`;
+      let priceSpan = document.createElement('span');
+      priceSpan.className = "shipItemPrice"
+      let price = ` Price : ₹ ${ele.price1}`
+      priceSpan.innerHTML = price;
+      details.append(title, br1, SKU, br2, Qty,priceSpan);
+      prodWrapper.append(img, details);
+      cartItems.append(prodWrapper)
+
+      })
+      document.getElementById('sub-total-prize').innerHTML = `₹  ${subTotal}`
+      document.getElementById('order-total-prize').innerHTML = `₹  ${subTotal}`
   }
 
   

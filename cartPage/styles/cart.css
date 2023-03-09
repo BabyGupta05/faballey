@@ -134,6 +134,7 @@ body {
   #box11 {
     display: flex;
     width: 40em;
+    /* width: 100%; */
     justify-content: space-between;
   }
   #boxname {

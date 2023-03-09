@@ -27,68 +27,109 @@
     </div>
 
     <div id="main-box-main">
-        <div id="adresstxt">
-            <p class="myshbag">Where do you want us to deliver?</p>
+        <div id="adress-form-details">
+
+            <div id="adresstxt">
+                <p class="myshbag">Where do you want us to deliver?</p>
+            </div>
+            <div id="Addressbox">
+            </div>
+            <div id="filltext">
+                <p class="filladdtxt">FILL YOUR ADDRESS BELOW</p>
+            </div>
+            <form id="adressform">
+                <div class="label">
+                    <label>First name*<br>
+                        <input id="first_name" type="text" placeholder="First name here">
+                    </label>
+                </div>
+                <div class="label">
+                    <label>Last name*<br>
+                        <input id="last_name" type="text" placeholder="Last name here">
+                    </label>
+                </div>
+                <div class="label">
+                    <label>Address 1* <br>
+                        <input id="address" type="text" placeholder="Please enter street address here">
+                    </label>
+                </div>
+                <div class="label">
+                    <label>Address 2<br>
+                        <input type="text" placeholder="Enter the Building">
+                    </label>
+                </div>
+                <div class="label">
+                    <label>City*<br>
+                        <input id="city" type="text" placeholder="City here">
+                    </label>
+                </div>
+                <div class="label">
+                    <label>State/Province*<br>
+                        <select id="state">
+                            <option value="">Select the State</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Andra Pradesh">Andra Pradesh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Assam">Assam</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Sikkim">Sikkim</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="label">
+                    <label>Phone/Mobile*<br>
+                        <input id="phone_number" type="text" placeholder="zip code">
+                    </label>
+                </div>
+                <!-- <input type="submit" style="padding: 5px;" value="SUBMIT" id="submit-form-adress" > -->
+            <input type="submit" name="submit" value="SUBMIT" style="color:#ffffff;font-size: 15px; width: 200px;padding: 0px;height: 40px;margin-top: 30px;" id="submit-form-adress" >
+        </form>
         </div>
-        <div id="Addressbox">
+
+    <div class="bagRightcntr">
+        <div class="bagRightitle">
+            <h3>Product Details</h3>
+            <a href="cart.html">Edit Bag</a>
         </div>
-        <div id="filltext">
-            <p class="filladdtxt">FILL YOUR ADDRESS BELOW</p>
+        <div id="shpItemsMain">
+            
         </div>
-        <form id="adressform">
-            <div class="label">
-                <label>First name*<br>
-                    <input id="first_name" type="text" placeholder="First name here">
-                </label>
+        <h3>Price Details</h3>
+        <div class="optionBox" style="width:100%;box-sizing:border-box">
+            <div class="przdlmain" style="width:100%">
+                <div class="prizeDetailbox">
+                    <div class="prizeDetail">
+                        <p>Sub Total</p>
+                        <span id="sub-total-prize"></span>
+
+                        </div>
+                        <div class="orderTotal">
+                            <p>Total</p>
+                            <span id="order-total-prize"> 
+                                <i class="fal fa-rupee-sign" ></i> 2880 
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="label">
-                <label>Last name*<br>
-                    <input id="last_name" type="text" placeholder="Last name here">
-                </label>
-            </div>
-            <div class="label">
-                <label>Address 1* <br>
-                    <input id="address" type="text" placeholder="Please enter street address here">
-                </label>
-            </div>
-            <div class="label">
-                <label>Address 2<br>
-                    <input type="text" placeholder="Enter the Building">
-                </label>
-            </div>
-            <div class="label">
-                <label>City*<br>
-                    <input id="city" type="text" placeholder="City here">
-                </label>
-            </div>
-            <div class="label">
-                <label>State/Province*<br>
-                    <select id="state">
-                        <option value="">Select the State</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="Odisha">Odisha</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Andra Pradesh">Andra Pradesh</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Assam">Assam</option>
-                        <option value="West Bengal">West Bengal</option>
-                        <option value="Sikkim">Sikkim</option>
-                    </select>
-                </label>
-            </div>
-            <div class="label">
-                <label>Phone/Mobile*<br>
-                    <input id="phone_number" type="text" placeholder="zip code">
-                </label>
-            </div>
-            <!-- <input type="submit" style="padding: 5px;" value="SUBMIT" id="submit-form-adress" > -->
-        <input type="submit" name="submit" value="SUBMIT" style="color:#ffffff;font-size: 15px; width: 200px;padding: 0px;height: 40px;margin-top: 30px;" id="submit-form-adress" >
-    </form>
+            <p class="shipdays">Estimated Delivery Time<br><br> India : 1-3 business days.<br> International: 7-10 business days.</p>
+    </div>
+<!-- 
+    <div class="shpItems" >
+        <img src="https://img.faballey.com/images/Product/TOP05836Z/1.jpg"> 
+        <span>Blue Mesh Polka Smocked Top 
+            <br> Sku : TOP05836B<br> Qty : 1 
+            <span class="shipItemPrice"> Price : <i class="fal fa-rupee-sign"></i> 640 </span> 
+        </span>
+        </div> -->
+
 
     </div>
     <footer id="footer">

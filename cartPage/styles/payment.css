@@ -1,0 +1,197 @@
+
+.payment-container{
+    padding:3%;
+}
+.payment-title-left{
+    width: 62%;
+    float: left;
+}
+.payment-heading{
+    padding: 15px 0;
+    display: inline-block;
+    width: 100%;
+}
+.payment-heading p{
+    float: left;
+    font-size: 20px;
+    color: #555555;
+
+}
+
+/* ---payment-method-styles----- */
+.payment-method-list{
+        display: block;
+        float: left;
+        width: 30%;
+        box-sizing: border-box;
+        border: 1px solid #eaeaea;
+}
+
+.activess{
+    color: #fc6486;
+    border-right: 3px solid #fc6486;
+    border-left:none;
+    border-top: none;
+    border-bottom: none;
+    background: #fff;
+    display: block;
+    font-size: 14px;
+    padding: 8%;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 99.99%;
+    text-align: left;
+    cursor: pointer;
+
+}
+.btn-method{
+ 
+    border-bottom: 1px solid #eaeaea;
+    border-left:none;
+    border-top: none;
+    border-right: none;
+   
+    display: block;
+    font-size: 14px;
+    padding: 8%;
+    background-color: #f4f4f4;
+    text-transform: uppercase;
+    font-weight: 510;
+    color: #555;
+    width:99.99%;
+    text-align: left;
+    cursor: pointer;
+
+}
+/*----------------------------- middle section----------- */
+.payment-form{
+    border: 1px solid #efefef;
+    margin-left:35%;
+}
+.payment-form h3{
+    padding: 14px;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+}
+.payment-credit-section{
+    padding: 10px 15px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.card-number{
+    line-height: 20px;
+    font-size: 13px;
+    padding: 11px;
+    color: #777;
+    width: 91%;
+    height: 60%;
+    border: 1px solid #eaeaea;
+    margin-bottom: 5%;
+}
+.card-name{
+    line-height: 20px;
+    font-size: 13px;
+    padding: 11px;
+    color: #777;
+    width: 91%;
+    height: 60%;
+    border: 1px solid #eaeaea;
+}
+.card-details{
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    
+}
+.card-year-item, .card-month-item,.card-cvv-item{
+    height: 5%;
+    width: 5%;
+    margin-right: 10%;
+
+}
+
+.card-month{
+    line-height: 20px;
+    font-size: 12px;
+    padding: 11px;
+    color: #777;
+    border: 1px solid #eaeaea;
+    max-width: 100%;
+}
+.card-year{
+    line-height: 20px;
+    font-size: 13px;
+    padding: 11px;
+    color: #777;
+    border: 1px solid #eaeaea;
+    max-width: 100%;
+}
+.card-cvv{
+
+    line-height: 20px;
+    font-size: 13px;
+    padding: 11px;
+    color: #777;
+    border: 1px solid #eaeaea;
+    max-width: 130%;
+}
+.btn-payment{
+    font-size: 14px;
+    width: 90%;
+    padding: 18px;
+    background: #fc6486;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.pay-address{
+    margin-bottom: 3%;
+}
+
+/* ------------------------------------footer styles-------------------------------------------- */
+.contact-footer{
+    /* margin-bottom: 30px; */
+    padding: 15px 0;
+    border-top: 1px solid #dcdcdc;
+    position: fixed;
+    left: 0;
+    bottom: 9%;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.contact-main{
+        max-width: 1000px;
+        margin: 0 auto;
+}
+
+.contact-item {
+    text-align: center;
+}
+.contact-para p{
+        font-size: 13px;
+        padding: 4px 0;
+}
+.contact-para p span {
+    font-weight: 600;
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1220px){
+    .contact-main{
+        width: 95%;
+    }
+}
