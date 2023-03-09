@@ -1,0 +1,355 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    background-color: #ffffff;
+  }
+  #navbar {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 70px;
+  }
+  #navbar-child {
+    display: flex;
+    width: 71%;
+    margin: auto;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding-top: 12px;
+  }
+  #child1 {
+    /* margin-top: 18px; */
+    cursor: pointer;
+  }
+  #child1 > img {
+    width: 70%;
+  }
+  #child2  {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 4rem;
+    margin: auto;
+    /* padding-top: 12px; */
+    align-items: center;
+    width: 30%;
+  }
+
+  #child3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #child3>p,i {
+    color: #919090;
+      font-size: 15px;
+  }
+
+  #custname{
+    border: 2px solid;
+  }
+
+
+
+  .top-bag a,.top-bag i{
+    display: flex;
+    flex-direction: column;
+    color: #a7a4a5;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  
+
+  .navbar-top-p {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .username-navbar {
+    line-height: 30px;
+    color: #adadad;
+    font-size: 14px;
+  }
+  
+  /* ------------navbar ends---------------------- */
+  
+  .myshbag {
+    text-align: start;
+    font-weight: 400;
+    color: #555555;
+    /* font-size: 10px; */
+    font-size: 20px;
+  }
+  #mainbox12 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 300px;
+  }
+  
+  #counterCart {
+    width: 40vw;
+  }
+  
+  .item-image{
+    margin: 0 15px 0 0;
+    width: 90px;
+    max-width: 100%;
+    border: 1px solid #e6e6e6;
+  }
+
+  .boximage {
+    max-width: 100%;
+    display: block;
+  }
+
+  #productBox {
+    width: 100%;
+  }
+  #box-box {
+    /* padding: 15px; */
+    /* width: 100%; */
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    justify-content: space-between;
+
+    font-size: 13px;
+    color: #000;
+    font-weight: normal;
+    padding: 15px;
+    width: 98%;
+    border: 1px solid #ececec;
+    margin-bottom: 30px;
+
+  }
+  #box11 {
+    display: flex;
+    width: 40em;
+    justify-content: space-between;
+  }
+  #boxname {
+    color: #000000;
+    font-weight: 600;
+    text-align: start;
+    word-spacing:4px;
+    font-size: 14px;
+  }
+  #box-grey {
+    color: #343232;
+    margin:1px;
+  }
+  #boxprice {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 5%;
+  }
+  #boxprice1 {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 12px;
+  }
+  #boxprice2 {
+    color: #bcbcbc;
+    /* font-size: 18px; */
+    font-weight: 700;
+  }
+  #qty {
+    font-weight: bold;
+    height: 100%;
+
+    font-size: small;
+    padding: 2px;
+  }
+  
+  #boxbottom {
+    border-top: 1px solid #ececec;
+    padding: 8px 0 0 0;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .item-specs{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -15px;
+    align-items: center;
+  }
+
+  .editAndRemove > button{
+    /* padding: 10px; */
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  #boxbottom > :nth-child(1) {
+    /* padding: 1px; */
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+    border: none;
+  }
+  #boxbottom > :nth-child(2) {
+    /* padding: 10px; */
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #898888;
+    background-color: transparent;
+  }
+
+
+  #continueshopping {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    width: 100%;
+    border: 1px solid #ececec;
+    padding: 10px 10px;
+  }
+  #continueshopping a {
+    color: #fc6486;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* -------------donation----------------- */
+  #donationbox {
+    width: 25vw;
+    margin-left: 35px;
+  }
+  #donation-mini {
+    background-color: #f4f4f4;
+    padding: 15px;
+  }
+  .dntntxt {
+    color: #555555;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: -5px;
+  }
+  .dntninfo {
+    color: #6e6e6e;
+  }
+  #CouPonID {
+    padding: 10px;
+    font-size: large;
+    border: 3px solid #ececec;
+    margin: 10px;
+  }
+  #CouponBtn {
+    padding: 10px;
+    font-size: large;
+    color: #ececec;
+    background-color: #343232;
+    cursor: pointer;
+  }
+  #CouponApplied {
+    font-size: large;
+    font-weight: bold;
+    /* color: green;  */
+    margin-left: 13px;
+  }
+  .reedeemgift {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 10px;
+  }
+  #subtotal-div {
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+    color: #949292;
+  }
+  #subtotal-div1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: bold;
+  }
+  #orderplacing {
+    text-align: center;
+  }
+  #orderplacing > button {
+    padding: 15px;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ececec;
+    background-color: #fc6486;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+  }
+  .etmdvry {
+    border: 2px solid #ececec;
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-top: 20px;
+    font-weight: 600;
+    padding: 18px;
+  }
+  
+/* Empty Cart */
+  #empty-cart{
+    /* visibility: hidden; */
+    /* border: 1px solid; */
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+  .cntshop2 a{
+    color: #fc6486;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+  } 
+
+  .noItembox{
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .noItembox p{
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  .noItembox a{    
+    color: #000;
+  }
+
+  /* -----------------footer---------------------- */
+  footer {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color:
+  #4A4A4A;
+  font-size: larger;
+  border-top: 2px solid #ececec; ;
+  
+  }
+  

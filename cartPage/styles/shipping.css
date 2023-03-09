@@ -1,0 +1,81 @@
+ 
+  /* ------------navbar ends---------------------- */
+  
+  .myshbag {
+    text-align: start;
+    font-weight: 400;
+    color: #555555;
+    font-size: 25px;
+  }
+  #main-box-main {
+    /* background-color: pink; */
+    width: 80%;
+    margin: auto;
+  }
+  #filltext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    background-color: #eeeeee;
+    width: 50%;
+    border: 1px solid #cccccc;
+    font-weight: bold;
+  }
+  .filladdtxt {
+    font-size: 14px;
+    color: #fc6486;
+  }
+  #adressform {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    /* background-color: #9a2b2b; */
+    padding: 20px;
+    gap: 20px;
+  }
+  #adressform input {
+    padding: 10px;
+    font-weight: 500;
+    color: #000;
+    font-size: 13px;
+    width: 250px;
+    margin-top: 1em;
+  }
+  #adressform select {
+    padding: 10px;
+    font-weight: 500;
+    color: #000;
+    font-size: 13px;
+    width: 250px;
+  }
+  #submit-form-adress {
+    background: #fc6486;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  /* -------------------------------address-box------------------- */
+  #boxx {
+    border: 1px dashed #cccccc;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  #boxx p {
+    font-size: 17px;
+    color: #4a4a4a;
+  }
+  #add-butt-on {
+    color: #ffffff;
+    background-color: #fc6486;
+    font-size: 15px;
+    width: 200px;
+    padding: 0px;
+    height: 40px;
+    background: #fc6486;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+  /* -----------------footer---------------------- */
