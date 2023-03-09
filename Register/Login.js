@@ -279,7 +279,7 @@ function passValidation(){
 }
 
 
-
+if(!log_status){
 document.getElementById("close").addEventListener("click",closePopup)
 
 function closePopup(){
@@ -296,7 +296,9 @@ function showPopup(){
 }
 
 }
+}
 
+if(!log_status){
 // close 
 document.getElementById("login_skip").addEventListener("click",closePopup)
 document.getElementById("close").addEventListener("click",closePopup)
@@ -317,3 +319,4 @@ function showPopup(){
 }
 
 
+}
