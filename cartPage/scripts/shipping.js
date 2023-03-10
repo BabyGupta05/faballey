@@ -70,8 +70,14 @@ document.getElementById("adressform").addEventListener("submit",addressfill)
                 state1:document.getElementById("state").value,
                 phone1:document.getElementById("phone_number").value
             }
-            localStorage.setItem("address-form",JSON.stringify(obj))
-            showaddress(obj)
+
+            if(!document.querySelector('input').value){
+                alert("fill the details....")
+            }
+            else{                
+                localStorage.setItem("address-form",JSON.stringify(obj))
+                showaddress(obj)
+            }
         }
         function showaddress(obj){
         console.log("hi",address)

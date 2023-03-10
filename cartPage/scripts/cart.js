@@ -11,7 +11,7 @@ document.getElementById('bag-navbar').addEventListener('click',()=>{
 })
 
 
-let id = 2;
+let id = 1;
 
 // let Procuctsssarray = JSON.parse(localStorage.getItem("mycart")) || [];
 let temp = [{
@@ -90,6 +90,8 @@ let temp = [{
 // })
 // document.getElementById("button").append(button);
 
+getUser();
+
 let proctArray = JSON.parse(localStorage.getItem('mycart')) || [];
 
 proctArray.forEach(function (elem) {
@@ -110,7 +112,6 @@ async function getUser(){
     console.log(error)
   }
 }
-getUser();
 displayCart(proctArray);
 
 console.log(proctArray,"outside")

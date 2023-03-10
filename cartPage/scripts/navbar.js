@@ -17,7 +17,7 @@ function navbar(){
        </div>
        <div class="top-bag" id="payment-navbar">
 
-       <a href="#"><i class="fa fa-credit-card"></i>Payment</a>
+       <a href="payment.html"><i class="fa fa-credit-card"></i>Payment</a>
        </div>
     </div>
 

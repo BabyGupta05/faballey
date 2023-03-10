@@ -25,9 +25,9 @@
     justify-content: center;
     align-items: center;
     margin-left: 0;
-    background-color: #eeeeee;
+    background-color: #f9f4f4;
     width: 50%;
-    border: 1px solid #cccccc;
+    border: 1px solid #ffffff;
     font-weight: bold;
   }
   .filladdtxt {
@@ -71,20 +71,20 @@
     padding: 10px;
   }
   #boxx p {
-    font-size: 17px;
+    font-size: 13px;
     color: #4a4a4a;
   }
   #add-butt-on {
     color: #ffffff;
+    text-align: center;
     background-color: #fc6486;
-    font-size: 15px;
-    width: 200px;
-    padding: 0px;
-    height: 40px;
+    font-size: 14px;
+    width: 80%;
+    padding:1rem 0px;
     background: #fc6486;
     border-radius: 50px;
     cursor: pointer;
-    border: 1px solid black;
+    border: none;
   }
   /* -----------------product details---------------------- */
 

@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body{
+    background: url(https://img.faballey.com/images/banner/4d95b59b-3b6f-4d76-834b-43d594aeae1b.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat:repeat;
+    background-blend-mode: difference;
+    border: 1px solid black;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form {
+    position: absolute;
+    background: white;
+    /* max-width: 400px; */
+    padding: 30px;
+    border-radius: 6px;
+    /* width: 100%; */
+}
+
+header {
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+
+
+.form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.field input {
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid #cacaca;
+}
+
+.field input:focus {
+    border-bottom-width: 2px;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link span,
+.form-link a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+
+.form a {
+    text-decoration: none;
+}
+
+.form-content a:hover {
+    text-decoration: underline;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+
+
+.line::before {
+    content: 'Or continue with';
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #232836;
+    padding: 0 15px;
+}
+
+.media-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-options {
+    cursor: pointer;
+}
+
+.media-options:hover {
+    background-color: grey;
+}
+
+img.google-img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+img.google-img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+a.google {
+    border: 1px solid black;
+}
+
+a.google span {
+    font-weight: 500;
+    color: black;
+}
+
+/*facebook*/
+
+img.facebook-img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+img.facebook-img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+a.facebook {
+    border: 1px solid black;
+}
+
+a.facebook span {
+    font-weight: 500;
+    color: black;
+}
+
+
+/*Apple*/
+
+img.apple-img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+img.apple-img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+a.apple {
+    border: 1px solid black;
+}
+
+a.apple span {
+    font-weight: 500;
+    color: black;
+}
+
+.logo>img {
+    height: 120px;
+}
+
+
+
+/* Final */
+
+.contBtn {
+    width: 100%;
+    background: #fc6486;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+    margin-top: 30px;
+    display: block;
+    border: none;
+    cursor: pointer;
+    font-weight:
+600;
+}
+
+
+.loginother img {
+    max-width: 140px;
+    width: 100%;
+    display: inline-block;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.skip {
+    color: #a5a5a5;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 35px;
+    display: block;
+    text-decoration: none;
+}
+
+.logininp {
+    border: 1px solid #ececec;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #6d6d6d;
+    font-size: larger;
+}
+
+
+.loginor {
+    text-align: center;
+    margin: 30px auto 0;
+    width: 80%;
+}
+
+
+.loginor h5 {
+    position: relative;
+    font-size: 13px;
+}
+
+
+.loginor h5::before {
+    content: "";
+    position: absolute;
+    background: #dcdcdc;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+}
+
+
+.loginor span {
+    position: relative;
+    background: #fbfbfb;
+    padding: 0 5px;
+    font-weight: 500;
+    font-size: medium;
+}
+
+
+h3 {
+    font-size: 24px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.form-content p {
+    font-size: 14px;
+    padding: 15px 0;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.loginother {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 35px;
+    padding: 20px;
+
+}
+
+.form-login {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    max-width: 650px;
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    -moz-webkit-transition: all 0.25s linear;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.cut {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/* ------OTP------------------ */
+.emailname-span-otp{
+    font-size: 15px;
+    font-style: italic;
+    color: #6d6d6d;
+    text-transform: lowercase;
+}

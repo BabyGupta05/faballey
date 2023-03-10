@@ -21,61 +21,62 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../styles/payment.css">
+    <link rel="stylesheet" href="../styles/nabar.css">
     <title>Document</title>
 </head>
 <body>
+  <div id="navbar">
+
+  </div>
+
     <div>
         <div class="payment-container">
           <div class="payment-title-left">
             <div class="payment-heading">
               <p>Choose Payment Mode</p>
             </div>
-            <!-- {/* ----------------- */} -->
             <div class="payment-method-list">
-              <button type="button" class="active">
+              <button type="button" id="credit-card" class="active btn-method">
                 CREDIT/DEBIT CARD
               </button>
-              <button type="button" class="btn-method">
+              <button type="button" id="upi" class="btn-method">
                 UPI
               </button>
-              <button type="button" class="btn-method">
-                NET BANKING
-              </button>
-              <button type="button" class="btn-method">
+              <button type="button" id="wallets" class="btn-method">
                 MOBILE WALLETS
               </button>
-              <button type="button" class="btn-method">
+              <button type="button" id="cod" class="btn-method">
                 CASH ON DELIVERY
               </button>
             </div>
             <!-- {/* -------------- */} -->
-            <div class="payment-form">
+            <div id="outer-payment-form">
+            <div id="payment-form" class="payment-form">
               <h3>CREDIT/DEBIT CARD</h3>
               <div class="payment-credit-section">
                 <input
                   type="text"
                   placeholder="XXXX  XXXX  XXXX  XXXX"
                   class="card-number"
-                  onChange={handleChange}
+                  required
                 />
                 <input
                   type="text"
                   placeholder="Cardholder Name"
                   class="card-name"
-                  onChange={handleChange}
+                  required
                 />
   
                 <div class="card-details">
                   <div class="card-month-item">
                     <input type="text" placeholder="MM" class="card-month"
-                    onChange={handleChange}
-                    
+                    required
                     
                     />
                   </div>
                   <div class="card-year-item">
                     <input type="text" placeholder="YY" class="card-year"
-                    onChange={handleChange}
+                    required
                     
                     
                     />
@@ -83,87 +84,64 @@
                   <div class="card-cvv-item">
                     <input type="text" placeholder="CVV" class="card-cvv"
                     
-                    onChange={handleChange}
+                    required
                     
                     />
                   </div>
                 </div>
               </div>
               
-              <button type="submit" class="btn-payment" onClick={card}>
+              <button type="submit" class="btn-payment">
                 Pay Now
               </button>
-            </div>
-         
+            </div>         
+            <div class="bagftsecure"><div class="securessl"><p><i class="fal fa-lock-alt"></i> Secure SSL Encryption</p><p><i class="fal fa-shield-check"></i> Guaranteed Safe Checkout</p></div><img src="https://img.faballey.com/images/pmticonsweb.png" alt="image">
           </div>
-  <!-- {/* ------------------------------right section------------------------------------------- */} -->
+          </div> 
+        </div>
   
-  
-  <div class="product-details">
-  <span class="product-title prize">
-            <h3>{count} product(s) in Bag</h3>
-            </span>
-  
-  
-  
+    <div class="product-details">
+    <span class="product-title prize">
+            <h3 id="prod-count"> products(s) in Bag</h3>
+      </span> 
             <div class="optionBox">
-              <div class="prizemain">
+              <div class="przdlmain">
                 <div class="prizeDetailbox">
-                  <div class="prizeDetail">
-                    <p>Sub Total</p>
-                    <span>
-                      <i class="fas fa-rupee-sign"></i> {sum}
+                  <div class="prizeDetail"><p>Sub Total</p>
+                    <span id="sub-total1"> </span>
+                  </div>
+                  <div class="prizeDetail" style="display:none" id="bnDis">
+                    <p class="bagdislbl">Bank Discount</p>
+                    <span class="bagdislbl">- <i class="fa fa-inr"></i>
+                      <span id="offDisam">0</span>
                     </span>
                   </div>
-                  <div class="prizeDetail">
+                  <div class="prizeDetail" id="bill-shippment-charge">
                     <p>Shipping</p>
-                    <span>
-                      <i class="fas fa-rupee-sign"></i> 50
-                    </span>
+                    <span><i class="fa fa-inr"></i> 0</span>
                   </div>
-                  <div class="orderTotal">
-                    <p>Total</p>
-                    <span>
-                      {" "}
-                      <i
-                        class="fas fa-rupee-sign"
-                      ></i> {totalamount}{" "}
-                    </span>
+                    <div class="orderTotal"><p>Total payable</p>
+                      <span id="sub-total2"><i class="fa fa-inr"></i><span id="tlPrice" data-total="2880">2880</span></span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-  
-  <!-- {/* ----------------middle-section------------------ */} -->
-  
-            <span class="product-title prize">
-            <h3 >Deliver To</h3>
-            </span>
-            <div class="product-title">
-              <a href="#">Change Address</a>
-            </div>
-            <p class="shipdetails pay-address">
-             isdjfoi <br/>
-             Itarsi,Madhya Pradesh <br/>
-             India - 461111 <br/>
-             Mobile <b>9340796426</b><br/></p>
-  
-            <!-- {/*------------------------------bottom-section-------------- */} -->
-            <p class="delivery-details">
-              Estimated Delivery Time<br/><br/>
-             India : 4-6 business days.<br/> International: 7-12 business days.
-             </p>
+  <!-- {/* ----------------middle-section------------------ */} -->  
+          <div class="ptmchngeAdrs">
+            <h3>Deliver To</h3>
+            <p><a href="shipping.html">Change Address</a>
+            </p>
           </div>
   
-  
-  
-  
-        </div>
-       
-  
-        <PayFooter/>
-  <ShipFooter/>
-  
+            <!-- {/*------------------------------bottom-section-------------- */} -->
+            <div class="deliverAddres" id="deliverAddres">
+              
+          </div>
+              <p class="shipdays">Estimated Delivery Time<br><br> India : 1-3 business days.<br> International: 7-10 business days.</p>
+          </div>  
+        </div>  
       </div>
 </body>
 </html>
+
+<script type="module" src="../scripts/payment.js"></script>

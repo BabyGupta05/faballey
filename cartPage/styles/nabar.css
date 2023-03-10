@@ -8,7 +8,7 @@ body {
   #navbar {
     background-color: #f4f4f4;
     width: 100%;
-    height: 70px;
+    height: 7rem;
   }
   #navbar-child {
     display: flex;
@@ -40,18 +40,19 @@ body {
   #child3{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     gap: 5px;
   }
 
   #child3>p,i {
-    color: #919090;
-      font-size: 15px;
+    /* align-items: center; */
+    color: #a6a3a3;
+    font-size: 15px;
   }
 
-  #custname{
+  /* #custname{
     border: 2px solid;
-  }
+  } */
 
 
 
