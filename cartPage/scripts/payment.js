@@ -108,6 +108,7 @@ document.querySelector(".btn-payment").onclick = ()=>{
         alert("fill the details....")
     }
     else{
+        console.log(" iside otp")
         location.href = "pay-otp.html"
     }
 
