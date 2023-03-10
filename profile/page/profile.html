@@ -65,16 +65,16 @@
       <div class="profile-right-section">
         <h3>Contact Information</h3>
 
-       <div class="profile-right-address-section">
+        <div class="profile-right-address-section">
           <input
             type="text"
-            value="guptababy510@gmail.com"
+            value=""
             placeholder="Enter your Email Id"
             id="user-email"
           />
           <div>
             <select name="Country" id="country">
-              <option value="" selected>Country</option>
+              <option value="Country" selected>Country</option>
               <option value="Afghanistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -364,29 +364,29 @@
               placeholder="Phone Number"
             />
           </div>
-          <div class="button-section">
+          <div id="primaryInfBtn" class="button-section">
             <button id="address-edit">EDIT</button>
-        <!-- <button id="address-update">UPDATE</button>
-            <button id="address-cancle">CANCLE</button> -->
-        </div>
+            <button id="address-update">UPDATE</button>
+            <button id="address-cancle">CANCLE</button>
+          </div>
         </div>
         <h3>Primary Information</h3>
         <div class="profile-right-info-section">
           <div class="primaryInfo">
             <p>First Name</p>
-            <p>Baby</p>
+            <p id="fname">Baby</p>
           </div>
           <div class="primaryInfo">
             <p>Last Name</p>
-            <p>Gupta</p>
+            <p id="lname">Gupta</p>
           </div>
           <div class="primaryInfo">
             <p>Gender</p>
-            <p>Female</p>
+            <p id="gen">Female</p>
           </div>
           <div class="primaryInfo">
             <p>Date OF Birth</p>
-            <p>01-01-1990</p>
+            <p id="udob">01-01-1990</p>
           </div>
           <div class="primaryInfo">
             <p>Password</p>
@@ -395,34 +395,61 @@
           <div class="button-section">
             <button id="info-edit">EDIT</button>
           </div>
-        <!-- <label for="userFirstName">First Name</label>
-          <input type="text" id="userName" placeholder="First Name" />
-          <label for="userLastName">Last Name</label>
-          <input type="text" placeholder="Last Name" />
-          <label for="gender">Gender</label>
-          <div class="gender-section">
-            <button id="male">MALE</button>
-            <button id="female">FEMALE</button>
+
+          <label class="InfoForm">First Name</label>
+          <input
+            type="text"
+            id="ufname"
+            placeholder="First Name"
+            class="InfoForm"
+          />
+          <label for="userLastName" class="InfoForm">Last Name</label>
+          <input
+            id="ulname"
+            type="text"
+            placeholder="Last Name"
+            class="InfoForm"
+          />
+          <label for="gender" class="InfoForm">Gender</label>
+          <div class="InfoForm gender-section">
+            <label class="InfoForm" for="MALE">MALE</label>
+            <input
+              class="InfoForm"
+              type="radio"
+              name="gender"
+              value="male"
+              class="InfoForm"
+            />
+            <label class="InfoForm" for="FEMALE">FEMALE</label>
+            <input
+              class="InfoForm"
+              type="radio"
+              name="gender"
+              value="female"
+              class="InfoForm"
+            />
           </div>
 
-          <label for="dob">Date OF Birth</label>
-          <div class="dob-select">
-            <select id="dob-day"></select>
-            <select id="dob-month"></select>
-            <select id="dob-year"></select>
+          <label class="InfoForm" for="dob">Date OF Birth</label>
+          <div class="dob-select InfoForm">
+            <select id="dob-day" class="InfoForm"></select>
+            <select id="dob-month" class="InfoForm"></select>
+            <select id="dob-year" class="InfoForm"></select>
           </div>
-          <label for="password">Password</label>
+          <label for="password" class="InfoForm">Password</label>
 
-          <div class="password">
-            <p>********</p>
-            <p>CHANGE PASSWORD</p>
-          </div>
-          <div class="button-section">
-             <button id="info-edit">EDIT</button> 
-            <button id="info-update">UPDATE</button>
-            <button id="info-cancel">CANCLE</button>
+          <!-- <div class="password InfoForm">
+            <p class="InfoForm">********</p>
+            <p id="chngPwd" class="InfoForm">CHANGE PASSWORD</p>
           </div> -->
-        <!-- </div> -->
+          <div class="chgPassword InfoForm">
+            <input id="upwd" type="text" class="InfoForm" placeholder="NEW PASSWORD" />
+          </div>
+          <div class="button-section InfoForm">
+            <button id="info-update" class="InfoForm">UPDATE</button>
+            <button id="info-cancel" class="InfoForm">CANCLE</button>
+          </div>
+        </div>
       </div>
     </div>
     <script type="module" src="./profile.js"></script>

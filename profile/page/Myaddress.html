@@ -21,17 +21,55 @@
   </head>
   <body>
     <div class="profile-section">
-      <div class="profile-left-section"></div>
+      <div class="profile-left-section">
+        <div class="profile-user-section">
+          <span> g </span>
+          <h4>Hello,</h4>
+          <p>guptababy510@gmail.com</p>
+        </div>
+        <hr />
+        <div class="profile-menu-section">
+          <ul>
+            <li>
+              <a id="profile-link" href="./profile.html"><i class="fa fa-circle-user"></i> My Profile</a>
+            </li>
+            <li>
+              <a id="order-link" href="./Myorder.html"><i class="fa fa-bag-shopping"></i> My Orders</a>
+            </li>
+            <li>
+              <a id="wishlist-link" href="./MyWishlist.html"><i class="fa fa-heart"></i> My Wishlist</a>
+            </li>
+            <li>
+              <a id="credit-link" href="./Mycredit.html"><i class="fa fa-wallet"></i> My Credits</a>
+            </li>
+            <li>
+              <a id="voucher-link" href="./Myvoucher.html"><i class="fa fa-gift"></i> My Vouchers</a>
+            </li>
+            <li>
+              <a id="address-link" href="./Myaddress.html"><i class="fa fa-address-book"></i> My Addresses</a>
+            </li>
+            <li>
+              <a id="contact-link" href="./ContactUs.html"><i class="fa fa-headset"></i> Contact Us</a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa fa-arrow-right-from-bracket"></i> Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="profile-right-section">
         <h3>
             My Addresses</h3>
-         <div class="profile-right-address">
+         <div class="profile-right-address" id="adress_show">
+          <div>
             <span>Baby</span>
             <p>mumbai</p>
             <p>Thane Maharashtra 401504 India</p>
             <p>Mobile: <b>8766946031</b> </p>
-           
           </div>
+        </div>
           <div id="address-check">
             <i class="fa-solid fa-check"></i>
         </div>
@@ -39,10 +77,12 @@
           <div class="profile-right-Newaddress">
             <p id="add-Address">ADD NEW ADDRESS</p>
             
-            <form>
-              <input type="text" placeholder="Full Name">
-              <input type="text" placeholder="Mobile Number" pattern="\d{10}"></input>
-              <select >
+            <form id="hidden_form" >
+              <input type="text" placeholder="Full Name" id="fname">
+
+              <input type="text" placeholder="Mobile Number" pattern="\d{10}" id="ph">
+
+              <select id="cntry">
                 <option value="" selected>Country</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
@@ -326,21 +366,25 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
               </select>
-              <input type="text" placeholder="Pin Code"  pattern="\d{10}">
-              <span> <i>Pincode should be 6 digits.</i>
-                </span>
-              <input type="text" placeholder="Address">
+
+              <input type="text" placeholder="Pin Code"  pattern="\d{6}" id="pin">
+
+              <!-- <span > <i>Pincode should be 6 digits.</i></span> -->
+
+              <input type="text" placeholder="Address" id="address">
               <div>
                 <i class="fa fa-check"></i> <p>Make this my default address</p>
               </div>
               <div class="button-section ">
                 <button id="add-address-btn">ADD ADDRESS</button>
+                
               </div>
             </form> 
           </div>
         </div>
       </div>
     </div>
-    <script type="module" src="./Myorder.js"></script>
+   
   </body>
+  <script src="./Myaddress.js"></script>
 </html>

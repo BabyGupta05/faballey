@@ -90,12 +90,12 @@
    
   }
   .fa {
-    display: inline-block;
+    /* display: inline-block;
     font-size: 20px;
     width: 18px;
     height: 18px;
     text-align: center;
-    line-height: 20px;
+    line-height: 20px; */
   }
 
   .profile-right-section{
@@ -104,6 +104,9 @@
    width: 40%;
    margin: 2% 0% 2% 2%;
    position: sticky;
+  }
+  .InfoForm{
+    display: none;
   }
   .profile-right-address-section,.profile-right-info-section,.profile-right-order,.profile-right-credit-section,.profile-right-voucher,.profile-right-wishlist-productDetails,.contact-details{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -115,7 +118,7 @@
     display: flex;
     overflow: hidden;
   }
-  #user-email,#country,#user-phoneNo,.button-section> button{
+  #user-email,#country,#user-phoneNo{
     padding: 15px;
     margin: 10px;
     font-weight: 700;
@@ -159,14 +162,16 @@
   .button-section> button > #address-edit,#info-edit{
     width: 100%;
   }
-   .button-section> button> #address-update,info-update{
+   #address-update,#info-update{
+    border: 1ps solid red;
     width: 60%;
+    display:none;
   }
-  .button-section> button>#address-cancle,#info-cancel{
+  #address-cancle,#info-cancel{
     width: 40%;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4 ;
     color: #323232;
-    
+    display: none;
   }
 
   .profile-right-info-section>label{
@@ -174,16 +179,35 @@
     margin: 15px -5px;
     padding: 15px;
   }
-  .profile-right-info-section>input,button,#country,.gender-section>button,#wishList-size{
+  .profile-right-info-section>input,button,#country,#wishList-size,.chgPassword>input{
     padding: 15px;
     margin:10px ;
     font-weight: 700;
     border: 1px solid #f2f2f2;
     width: 89.5%;
   }
-  .profile-right-info-section>div{
-    display: flex;
+  .gender-section{
+    padding: 15px;
+    margin:10px ;
+    font-weight: 700;
+    /* border: 1px solid #f2f2f2; */
+    /* border: 1px solid red; */
+    width: 89.5%;
+    color: #9a9a9a;
   }
+  .gender-section>input{
+    /* accent-color: #FF8BA5; */
+    font-size: medium;
+    font-weight: 700;
+    color:#FF8BA5;
+    margin:0px 15px 5px 5px ;
+    border: none;
+  }
+  .profile-right-info-section>div{
+    display: flex ;
+  }
+  
+  
   .profile-right-info-section>div>.dob-select{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -192,19 +216,19 @@
     text-align: center;
 }
 
-.gender-section>button{
+/* .gender-section>button{
   width: 18%;
   border: 1px solid transparent;
-}
+} */
 /* class for click button */
 /* .button-active{
   background-color: #FF8BA5;
   border: 1px solid transparent;
   color: white;
 } */
-.gender-section>button:hover{
+/* .gender-section>button:hover{
   cursor: pointer;
-}
+} */
 .password{
   border: 1px solid #f2f2f2;
   margin: 10px 10px ; 
@@ -386,31 +410,37 @@
   }
  
   .profile-right-Newaddress {
-    width: 150%;
-    
+    width: 104%;
+    border: none;
   }
   
   .profile-right-Newaddress> p#add-Address{
     text-align: center;
+    color: #292727;
+    font-weight: 550;
   }
   .profile-right-Newaddress form{
-    border: 1px solid #f4f4f4;
-    margin: 15px;
-    padding:30px 15px;
+    /* border: 1px solid #f4f4f4; */
+    /* margin: 15px; */
+    border: none;
+    padding:20px 50px;
+
   }
   .profile-right-Newaddress form>input,select{
-    border:1px solid red;
+    /* border:1px solid red; */
     width: 100%;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
     border: none;
-    border-bottom: 1px solid #999;
-    padding: 7px 0;
+    /* padding: 7px 0; */
     font-size: 15px;
     font-weight: 500;
     color: #808080;
     
   }
-  .profile-right-Newaddress form>input{
+  .profile-right-Newaddress form input{
     margin: 15px 0px 15px;
+
+    /* background-color: red; */
   }
  
   .profile-right-Newaddress form>input:focus{
@@ -438,6 +468,7 @@
     width: 50%;
     margin: auto;
   }
+  
   .profile-right-wishlist-headerBox{
     width: 150%;
     display: flex;
@@ -461,6 +492,7 @@
     width: 145%;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
   }
   .profile-right-wishlist-image{
     display: flex;
@@ -481,7 +513,7 @@
      overflow: hidden;
   }
   .profile-right-wishlist-Details{
-    width: 120%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     overflow: hidden;
@@ -536,6 +568,24 @@
     color: #323232;
   }
 
+  
+  #adress_show>div{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    line-height: 24px;
+    padding: 10px;
+    margin:10px 0px;
+    
+  }
+  #adress_show{
+    width: 100%;
+    background-color:  none;
+   
+  }
+
+  #hidden_form{
+    display: none;
+  }
+
   @media only screen and (max-width: 1150px) {
     /* Medium Screen  */
     .profile-right-wishlist-image{
@@ -545,13 +595,33 @@
       margin: 10px 0px;
       font-size: 12px;
     }
-    .profile-right-wishlist-Details div p, select,button{
-      height: 20px;
-      
+    .profile-right-wishlist-Details div {
+      display: flex;
+      align-items: center;
+      /* border: 1px solid red; */
+      font-size: 10px;
+      /* padding:0px; */
+      margin-top: 2%;
+    }
+    .profile-right-wishlist-Details{
+      /* display: flex;
+      align-items: center; */
+      /* border: 1px solid red; */
+      flex-wrap: wrap;
+    }
+    
+    .profile-right-info-section>input, button, #country, #wishList-size, .chgPassword>input{
+      margin: 0px;
+      padding:10px 5px;
+      width: 100%;
+      font-size:11px ;
+      /* height: 100%; */
+
     }
     #remove-wishlist{
-      margin: -5px -20px 0px 10px;
+      margin: 0px -20px 0px 10px;
       color: #999;
+      padding-top: 15px;
       }
       
   }
@@ -565,7 +635,30 @@
       margin: 10px 0px;
       font-size: 12px;
     }
-    .profile-right-wishlist-Details div p, select,button{
-      height: 20px;
+    .profile-right-wishlist-Details div {
+      /* border: 1px solid red; */
+      font-size: 10px;
+      /* padding:0px; */
+      margin-top: 2%;
     }
+    
+    
+    .profile-right-info-section>input, button, #country, #wishList-size, .chgPassword>input{
+      margin: 0px;
+      padding:10px 5px;
+      width: 100%;
+      font-size:10px ;
+
+    }
+    #remove-wishlist{
+      margin: 0px -20px 0px 10px;
+      color: #999;
+      padding-top: 15px;
+      }
+      #addToBag{
+        width: 100%;
+        padding: 0px;
+        height: 100%;
+        /* background-color: red; */
+      }
   }

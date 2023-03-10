@@ -1,33 +1,33 @@
  function menu() {
     return `
         <div class="profile-user-section">
-          <span> g </span>
+          <span id="user-sign"> g </span>
           <h4>Hello,</h4>
-          <p>guptababy510@gmail.com</p>
+          <p id="user-mail">guptababy510@gmail.com</p>
         </div>
         <hr />
         <div class="profile-menu-section">
           <ul>
             <li>
-              <a href="./profile.html"><i class="fa fa-circle-user"></i> My Profile</a>
+              <a id="profile-link" href="./profile.html"><i class="fa fa-circle-user"></i> My Profile</a>
             </li>
             <li>
-              <a href="./Myorder.html"><i class="fa fa-bag-shopping"></i> My Orders</a>
+              <a id="order-link" href="./Myorder.html"><i class="fa fa-bag-shopping"></i> My Orders</a>
             </li>
             <li>
-              <a href="./MyWishlist.html"><i class="fa fa-heart"></i> My Wishlist</a>
+              <a id="wishlist-link" href="./MyWishlist.html"><i class="fa fa-heart"></i> My Wishlist</a>
             </li>
             <li>
-              <a href="./Mycredit.html"><i class="fa fa-wallet"></i> My Credits</a>
+              <a id="credit-link" href="./Mycredit.html"><i class="fa fa-wallet"></i> My Credits</a>
             </li>
             <li>
-              <a href="./Myvoucher.html"><i class="fa fa-gift"></i> My Vouchers</a>
+              <a id="voucher-link" href="./Myvoucher.html"><i class="fa fa-gift"></i> My Vouchers</a>
             </li>
             <li>
-              <a href="./Myaddress.html"><i class="fa fa-address-book"></i> My Addresses</a>
+              <a id="address-link" href="./Myaddress.html"><i class="fa fa-address-book"></i> My Addresses</a>
             </li>
             <li>
-              <a href="./ContactUs.html"><i class="fa fa-headset"></i> Contact Us</a>
+              <a id="contact-link" href="./ContactUs.html"><i class="fa fa-headset"></i> Contact Us</a>
             </li>
             <li>
               <a href=""
