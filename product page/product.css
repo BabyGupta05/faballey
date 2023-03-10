@@ -23,11 +23,11 @@ body{
     justify-content: space-around;
     border: 1px solid rgba(128, 128, 128, 0.308);
     margin: 6px;
-
 }
 #top .topbar-up .dropdown a{
     color:grey;
     font-size: 13px;
+    
 }
 #top .topbar-up .btn{
     border: none;
@@ -229,7 +229,9 @@ body{
 }
 .products-detail .product-name{
     line-height: 1.1em;
-    height: 2em;
+    height: 3rem;
+    font-size: 13px;
+    font-weight: 800;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

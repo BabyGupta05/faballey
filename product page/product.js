@@ -297,11 +297,11 @@ function funcdress(){
     fetchData(`https://test-api-y3sx.onrender.com/products?_limit=27&_sort=category&_category=dress`)
 }
 
-document.getElementById("party_wear").addEventListener("click",funcpartywaer);
+// document.getElementById("party_wear").addEventListener("click",funcpartywaer);
 
-function funcpartywaer(){
-    fetchData(`https://test-api-y3sx.onrender.com/products?_limit=27&_sort=category&_category=party`)
-}
+// function funcpartywaer(){
+//     fetchData(`https://test-api-y3sx.onrender.com/products?_limit=27&_sort=category&_category=party`)
+// }
 
 
 
