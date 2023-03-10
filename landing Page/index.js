@@ -121,80 +121,82 @@ var text = document.getElementById("input_email").value;
 }
 
 // ____________________________________search Query________________________//
-// let searchInput_value= document.getElementById("inputSearch");
-// // searchInput_value.addEventListener("oninput", function(){
-// //   debounce(getSuggestions, 1000);
-// // })
-// function myFunc5(){
-//   console.log("hi")
-// }
 
-// //debounce function...........
-// let timerId;
+let search_input= document.getElementById("inputSearch");
 
-// function debounce(func, delay) {
-//     console.log("debounce executed");
-//     let search_word = document.getElementById("inputSearch").value;
-//     if (timerId) {
-//         clearTimeout(timerId);
-//     }
-//     timerId = setTimeout(() => {
-//         getSuggestions(search_word);
-//     }, delay)
-// }
+search_input.addEventListener("input", function(){
+  console.log("hi")
+  debounce(getSuggestions, 1000);
+} )
+//debounce function...........
+let timerId;
 
-// //getting suggestions......
-// async function getSuggestions(searchWord) {
-//     try {
-//         let data = await getData();
+function debounce(func, delay) {
+    console.log("debounce executed");
+    let search_word = document.getElementById("inputSearch").value;
+    if (timerId) {
+        clearTimeout(timerId);
+    }
+    timerId = setTimeout(() => {
+        getSuggestions(search_word);
+    }, delay)
+}
 
-//         if (data.Response === 'True') {
-//             let dropdown = document.getElementById("dropdown");
-//             dropdown.innerHTML = "";
-//             data.Search.map((product) => {
-//                 let option = document.createElement("option");
-//                 option.setAttribute("class", "option__option")
+//getting suggestions......
+async function getSuggestions(searchWord) {
+    try {
+        let data = await getData();
+        console.log(data.length)
 
-//                 option.value = product.Title;
+        if (data.Response === 'True') {
+            let dropdown = document.getElementById("dropdown");
+            dropdown.innerHTML = "";
+            data.map((product) => {
+                let option = document.createElement("option");
+                option.setAttribute("class", "option__option")
+                console.log(product+"pro");
+                option.value = product.title;
 
-//                 dropdown.append(option);
-//                 // displayData(product);   redirect to the prod details page.......................
+                dropdown.append(option);
+                search_input.append(dropdown);
+                // displayData(product);   redirect to the prod details page.......................
 
-//             })
-//         } else {
-//             console.log(data.Error);
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-// // URL: https://test-api-y3sx.onrender.com/products  ///////////////
-// //fetching url and sending the data............
-// async function getData() {
-//     let search_word = document.getElementById("search").value;
-//     let url = `https://test-api-y3sx.onrender.com/products`;
-//     try {
-//         let res = await fetch(url);
-//         let data1 = await res.json();
-//         console.log(data1);
-//         return data1;
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+            })
+        } else {
+            console.log(data.Error);
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+// URL: https://test-api-y3sx.onrender.com/products  ///////////////
+//fetching url and sending the data............
+async function getData() {
+    let search_word = document.getElementById("inputSearch").value;
+    let url = `https://test-api-y3sx.onrender.com/products?q=${search_word}&_limit=5`;
+    try {
+        let res = await fetch(url);
+        let data1 = await res.json();
+        console.log(data1);
+        return data1;
+    } catch (error) {
+        console.log(error);
+    }
+}
+getData();
 
+//getting fetched data ...........
+async function init() {
+    try {
+        let data = await getData();
+        let search_word = document.getElementById("inputSearch").value;
+        if (!search_word) {
+            let dropdown = document.getElementById("dropdown");
+            dropdown.innerHTML = "No such Product";
+            console.log("dropdown")
+        }
+    } catch (error) {
+        console.log(error);
+    }
 
-// //getting fetched data ...........
-// async function init() {
-//     try {
-//         let data = await getData();
-//         let search_word = document.getElementById("inputSearch").value;
-//         if (search_word === "") {
-//             let dropdown = document.getElementById("dropdown");
-//             dropdown.innerHTML = "No such Product";
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-
-// }
+}

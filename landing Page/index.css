@@ -513,6 +513,15 @@ a:hover {
     text-align: center;
 }
 
+/* search dropdown_______________________ */
+
+        .option__option{
+            width: 500px;
+        }
+        #dropdown{
+            width: 500px;
+            background-color: white;
+        }
 
 /* _________________________________________ended Navbar CSS __________________________________________*/
 
