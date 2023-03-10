@@ -61,7 +61,7 @@ function showData(data){
     icondiv.style.marginLeft="0px"
 
     let icon=document.createElement("img");
-    icon.src = "/faballey/product page/images/g.svg"
+    icon.src = "./images/g.svg"
     icon.style.width="22px"
 
     let dtitle=document.createElement("p");
@@ -112,6 +112,11 @@ function showData(data){
     addbtn.addEventListener("click",()=>{
         console.log(data)
         functionvishal(data);
+        addbtn.textContent="GO TO BAG";
+        addbtn.style.background = "#03bb5c"
+        addbtn.onclick= ()=>{
+          location.href = "../cartPage/html/cart.html"
+        }
     });
 
 

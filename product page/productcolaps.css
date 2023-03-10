@@ -23,8 +23,16 @@ h1 {
 .accordion-item {
   color: rgb(66,69,66);
   border: none;
-  font-size: 15px;
+  font-size: 12px;
 }
+.accordion-item-header:hover{
+  color: rgb(252,100,134);
+}
+
+.accordion-item-header:focus{
+  color: rgb(252,100,134);
+}
+
 .accordion-item-header {
   padding: 0rem 3rem 0.4rem 1rem;
   font-weight: bold;
@@ -33,6 +41,9 @@ h1 {
   position: relative;
   cursor: pointer;
 }
+
+
+
 .accordion-item-header::after {
   content: "\002B";
   font-size: 2rem;

@@ -1,7 +1,7 @@
 .like-button .heart-icon {
     height: 100px;
     width: 100px;
-    background: url("/faballey/product page/images/heart.png");
+    background: url("./images/heart.png");
     background-position: left;
     cursor: pointer;
     position: absolute;

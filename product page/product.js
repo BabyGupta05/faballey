@@ -79,7 +79,7 @@ function showData(data){
         ddiv.className="ddiv"
 
         let icon=document.createElement("img");
-        icon.src = "/faballey/product page/images/g.svg"
+        icon.src = "./images/g.svg"
         icon.style.width="22px"
 
         let dtitle=document.createElement("p");
