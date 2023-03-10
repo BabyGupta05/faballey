@@ -1,6 +1,6 @@
 let id=localStorage.getItem("product-id")||"";
 console.log(id)
-
+let user_id = localStorage.getItem("logged") || 1 ;
 async function fetchData(){
     try {
         let res = await fetch(`https://test-api-y3sx.onrender.com/products/${id}`);
@@ -22,24 +22,33 @@ function showData(data){
     let image2=document.createElement("img");
     let image3=document.createElement("img");
     let image4=document.createElement("img");
+    image1.className="image"
+    image2.className="image"
+    image3.className="image"
+    image4.className="image"
     image1.src=data.img1
     image2.src=data.img2
     image3.src=data.img3
     image4.src=data.img4
-    image1.style.width="450px"
-    image2.style.width="450px"
-    image3.style.width="450px"
-    image4.style.width="450px"
-    image1.style.height="700px"
-    image2.style.height="700px"
-    image3.style.height="700px"
-    image4.style.height="700px"
+
     
     let name=document.createElement("h2");
     name.textContent=data.title;
 
     let price = document.createElement("h2");
     price.textContent="₹ "+data.price1;
+
+    let price2=document.createElement("h2");
+    price2.textContent="₹ "+data.price2;
+    price2.style.marginLeft="10px"
+    price2.style.textDecoration="line-through"
+    price2.style.color="grey"
+
+
+
+    let pricediv=document.createElement("div");
+    pricediv.append(price,price2)
+    pricediv.className="pricediv"
 
     let tax=document.createElement("p");
     tax.textContent="Inclusive of all taxes";
@@ -52,11 +61,11 @@ function showData(data){
     icondiv.style.marginLeft="0px"
 
     let icon=document.createElement("img");
-    icon.src = "g.svg"
+    icon.src = "/faballey/product page/images/g.svg"
     icon.style.width="22px"
 
     let dtitle=document.createElement("p");
-    dtitle.textContent = "EXPRESS   | 3 Day Delivery  on orders placed before 2pm"
+    dtitle.textContent = " EXPRESS   | 3 Day Delivery on orders placed before 2pm"
     dtitle.style.marginLeft= "10px"
     icondiv.append(icon,dtitle)
 
@@ -100,12 +109,26 @@ function showData(data){
     let whishbtn=document.createElement("button");
     whishbtn.className="add-button"
     addbtn.textContent="ADD TO BAG";
+    addbtn.addEventListener("click",()=>{
+        console.log(data)
+        functionvishal(data);
+    });
+
+
+
     whishbtn.textContent="ADD TO WHISHLIST";
     addtobtn.append(addbtn,whishbtn);
+    whishbtn.addEventListener("click",addfunc);
+
+    function addfunc(){
+        wishList(data);
+    }
 
     let pincode=document.createElement("div");
     let h3=document.createElement("h3");
     h3.textContent="Check Delivery Time";
+    h3.style.marginTop="10px"
+    h3.style.marginBottom="15px"
 
     let pindiv=document.createElement("div");
     let input=document.createElement("input");
@@ -113,10 +136,11 @@ function showData(data){
     input.type="number"
     input.className="pincode-input"
     let checkbtn=document.createElement("button");
-    checkbtn.innerHTML=`<i class="fa-regular fa-heart"></i>`+"CHECK"
+    checkbtn.innerHTML=`<i class="fa-regular fa-heart"></i> `+"CHECK"
 
     checkbtn.className="pincode-input"
     pindiv.append(input,checkbtn);
+    pindiv.className="pin-div"
     pincode.append(h3,pindiv);
 
 
@@ -138,7 +162,7 @@ function showData(data){
     avality.textContent="CHECK IN-STORE AVAILABILITY"
     avality.className="avality-checkbox"
 
-    rightContainer.append(name,price,tax,sku,icondiv,size,addtobtn,pincode,codbtns,avality);
+    rightContainer.append(name,pricediv,tax,sku,icondiv,size,addtobtn,pincode,codbtns,avality);
 
 
     imgcontainer.append(image1,image2,image3,image4);
@@ -146,3 +170,115 @@ function showData(data){
 }
 
 
+// add___________________________________ to________________________ bag
+async function functionvishal(elem) {
+    event.preventDefault();
+    let cart= await getUser();
+    // console.log(cart)
+//    console.log(cart)
+    localStorage.setItem("mycart", JSON.stringify(cart));
+    
+       // check duplicate
+       let c=0;
+       cart.map(function(ele){
+          if(elem.id==ele.id){
+              c++;
+          }
+       })
+       console.log(cart)
+       if(c==0){
+        cart.push(elem)
+         patchUser();
+       } else {
+       alert("Already present in Cart")
+       }
+
+    async function patchUser(){
+      try {
+        let user =await fetch(`https://test-api-y3sx.onrender.com/users/${user_id}`,{
+          method: "PATCH",
+           headers: {
+               "Content-Type":"application/json",
+            },
+            body:JSON.stringify({
+              "cart": cart
+            }) 
+        })
+      } catch (error) {
+        console.log(error)
+  }
+  }
+  
+  }
+
+// getUser()
+  async function getUser(){
+    try {
+      let user =await fetch(`https://test-api-y3sx.onrender.com/users/${user_id}`);
+      let userArr =await user.json();
+    //   localStorage.setItem("mycart", JSON.stringify(userArr.cart))
+    //   console.log(userArr.cart, "inside get")
+      return userArr.cart;
+    } catch (error) {
+      console.log(error)
+    }
+  }
+ 
+  // Add_________________________ to____________________________ WishList
+
+
+
+
+async function wishList(elem, index) {
+    event.preventDefault();
+    let wishList= await getWish();
+    // console.log(cart)
+    
+    localStorage.setItem("mycart", JSON.stringify(wishList));
+
+    // check duplicate
+ let c=0;
+ wishList.map(function(ele){
+    if(elem.id==ele.id){
+        c++;
+    }
+ })
+
+ if(c==0){
+  wishList.push(elem)
+   console.log(wishList)
+   patchUser();
+ } else {
+ alert("Already present in wishlist")
+ }
+
+    async function patchUser(){
+      try {
+        let user =await fetch(`https://test-api-y3sx.onrender.com/users/${user_id}`,{
+          method: "PATCH",
+           headers: {
+               "Content-Type":"application/json",
+            },
+            body:JSON.stringify({
+              "wishList": wishList
+            }) 
+        })
+      } catch (error) {
+        console.log(error)
+  }
+  }
+  
+  }
+
+// getUser()
+  async function getWish(){
+    try {
+      let user =await fetch(`https://test-api-y3sx.onrender.com/users/${user_id}`);
+      let userArr =await user.json();
+    //   localStorage.setItem("mycart", JSON.stringify(userArr.cart))
+      console.log(userArr.wishList, "inside wish get")
+      return userArr.wishList;
+    } catch (error) {
+      console.log(error)
+    }
+  }
