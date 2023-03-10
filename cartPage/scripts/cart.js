@@ -401,13 +401,18 @@ async function wishlistadd(elem,index){
 document.getElementById("CouponBtn").addEventListener("click",()=>{
   let x= document.getElementById("CouPonID").value
   if(x=="FAB1000"){
-    document.getElementById("discount11").innerText="1000"
     let tprice=JSON.parse(localStorage.getItem("local-subtotal"))||0
-    tprice-=1000
-    localStorage.setItem("local-subtotal", tprice);
-    document.getElementById("CouponApplied").innerText="Coupon Applied"
-    document.getElementById("CouponApplied").style.color="green"
-    document.getElementById("subtotalll2").innerText = tprice
+    if(tprice>5000){
+      document.getElementById("discount11").innerText="1000"
+      tprice-=1000
+      localStorage.setItem("local-subtotal", tprice);
+      document.getElementById("CouponApplied").innerText="Coupon Applied"
+      document.getElementById("CouponApplied").style.color="green"
+      document.getElementById("subtotalll2").innerText = tprice
+    }
+    else{
+      document.getElementById("CouponApplied").innerText="Cart value should be more than 5000"
+    }
   }
   else{
     document.getElementById("CouponApplied").innerText="Wrong Coupon Applied"
