@@ -1,0 +1,184 @@
+ 
+  /* ------------navbar ends---------------------- */
+  body{
+    font-size: 1.1rem;
+    font-family: "Lato", sans-serif;
+  }
+
+  .myshbag {
+    text-align: start;
+    font-weight: 400;
+    color: #555555;
+    font-size: 25px;
+  }
+  #main-box-main {
+    /* background-color: pink; */
+    width: 71%;
+    margin: auto;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  #filltext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    background-color: #f9f4f4;
+    width: 50%;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+  }
+  .filladdtxt {
+    font-size: 14px;
+    color: #fc6486;
+  }
+  #adressform {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    align-items: center;    
+    padding: 1.5rem;
+    gap: 1rem 5rem;
+  }
+  #adressform input {
+    padding: 10px;
+    font-weight: 500;
+    color: #000;
+    font-size: 13px;
+    width: 100%;
+    margin-top: 1em;
+  }
+  #adressform select {
+    padding: 10px;
+    font-weight: 500;
+    color: #000;
+    font-size: 13px;
+    width: 100%;
+  }
+  #submit-form-adress {
+    background: #fc6486;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  /* -------------------------------address-box------------------- */
+  #boxx {
+    border: 1px dashed #cccccc;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  #boxx p {
+    font-size: 13px;
+    color: #4a4a4a;
+  }
+  #add-butt-on {
+    color: #ffffff;
+    text-align: center;
+    background-color: #fc6486;
+    font-size: 14px;
+    width: 80%;
+    padding:1rem 0px;
+    background: #fc6486;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+  }
+  /* -----------------product details---------------------- */
+
+  #shpItemsMain{
+    width: 100%;
+  }
+
+.bagRightcntr{
+    width: 30%;
+    
+    padding: 15px 0 40px 0;
+  }
+
+  .bagRightitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bagRightitle h3{
+    font-size: 20px;
+    color: #555555;
+    font-weight: 400;
+  }
+  .bagRightitle a {
+    font-size: 14px;
+    color: #fc6486;
+    font-weight: 400;
+    float: right;
+    text-decoration: underline;
+    line-height: 22px;
+}
+
+  .prod-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 5px 0;
+    /* border: 1px solid; */
+    border-bottom: 1px solid #efefef;
+  }
+
+  .prod-wrapper img{
+    max-width: 40px;
+  }
+
+  .prod-wrapper img+span{
+    font-size: 11px;
+    color: #4a4a4a;
+    line-height: 15px;
+  }
+
+  #shpItemsMain+h3{
+    font-size: 20px;
+    color: #555555;
+    font-weight: 400;
+    padding-bottom: 15px;
+  }
+
+  .optionBox {
+    display: inline-block;
+    background: #f4f4f4;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.prizeDetail {
+  width: 100%;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+  justify-content: space-between;
+}
+
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  float: left;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #fc6486;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.shipdays {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #4a4a4a;
+  border: 1px solid #efefef;
+  padding: 10px;
+}

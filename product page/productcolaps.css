@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+  text-align: center;
+  /* margin: 2rem 0; */
+  /* font-size: 2.5rem; */
+}
+
+
+.accordion {
+  width: 110%;
+  max-width: 656px;
+  margin-left: -15px;
+  /* margin-top: -20px; */
+}
+.accordion-item {
+  color: rgb(66,69,66);
+  border: none;
+  font-size: 12px;
+}
+.accordion-item-header:hover{
+  color: rgb(252,100,134);
+}
+
+.accordion-item-header:focus{
+  color: rgb(252,100,134);
+}
+
+.accordion-item-header {
+  padding: 0rem 3rem 0.4rem 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  /* border-top: 1px solid; */
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+@media(max-width:767px) {
+  html {
+    font-size: 14px;
+  }
+}
