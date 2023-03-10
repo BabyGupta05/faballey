@@ -78,9 +78,9 @@
             <p id="add-Address">ADD NEW ADDRESS</p>
             
             <form id="hidden_form" >
-              <input type="text" placeholder="Full Name" id="fname">
+              <input type="text" placeholder="Full Name" id="fname" required>
 
-              <input type="text" placeholder="Mobile Number" pattern="\d{10}" id="ph">
+              <input type="text" placeholder="Mobile Number" pattern="\d{10}" id="ph" required>
 
               <select id="cntry">
                 <option value="" selected>Country</option>
@@ -367,11 +367,11 @@
                 <option value="Zimbabwe">Zimbabwe</option>
               </select>
 
-              <input type="text" placeholder="Pin Code"  pattern="\d{6}" id="pin">
+              <input type="text" placeholder="Pin Code"  pattern="\d{6}" id="pin" required>
 
               <!-- <span > <i>Pincode should be 6 digits.</i></span> -->
 
-              <input type="text" placeholder="Address" id="address">
+              <input type="text" placeholder="Address" id="address" required>
               <div>
                 <i class="fa fa-check"></i> <p>Make this my default address</p>
               </div>

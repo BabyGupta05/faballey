@@ -33,7 +33,7 @@ event.preventDefault()
 });
 
 
-// getAdress()
+getAdress()
 // getting Data from server
 async function getAdress(obj){
   console.log(obj,user_id)
@@ -41,7 +41,10 @@ async function getAdress(obj){
     let user =await fetch(`https://test-api-y3sx.onrender.com/users/${user_id}`);
     let userArr = await user.json();
     let adress = userArr.address;
-    adress.push(obj)
+    if(obj){
+      adress.push(obj)
+    }
+    
     console.log(adress)
     displayAdress(adress)
   patchAdress(adress)

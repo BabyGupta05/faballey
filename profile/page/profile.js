@@ -12,8 +12,8 @@ link.style.color="#FF8BA5"
 let user_id = localStorage.getItem("logged") || 1;
 // contact information
 let editBtn = document.getElementById("address-edit");
-let cancleBtn = document.getElementById("address-update");
-let updateBtn = document.getElementById("address-cancle");
+let cancleBtn = document.getElementById("address-cancle");
+let updateBtn = document.getElementById("address-update");
 let email = document.getElementById("user-email");
 let country = document.getElementById("country");
 let phone = document.getElementById("user-phoneNo");
@@ -90,14 +90,15 @@ function display(data) {
 }
 
 updateBtn.onclick = function() {
-  console.log("update");
-  // console.table(uobj)
-  // patch here
+  console.log(uobj);
+  uobj.mail=email.value;
+  uobj.ph=phone.value;
+  
   editBtn.style.display = "block";
   updateBtn.style.display = "none";
   cancleBtn.style.display = "none";
-  
- 
+  console.log(uobj);
+  patchData(uobj);
 }
 
 cancleBtn.onclick = function() {
@@ -116,7 +117,7 @@ editBtn.onclick = function() {
   editBtn.style.display = "none";
   updateBtn.style.display = "block";
   cancleBtn.style.display = "block";
- 
+  
 }
 
 
