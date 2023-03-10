@@ -11,12 +11,14 @@ body {
 #navbar {
     width: 100%;
     margin-top: 0px;
+    z-index: 11;
 }
 
 .sticky {
     position: sticky;
     position: -webkit-sticky;
     top: 0%;
+    overflow: hidden;
 }
 
 /* 1st navbar CSS__________________________________________________________________________________ */
@@ -366,7 +368,7 @@ p+#close {
     flex-wrap: wrap;
     left: 0;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 1px;
     padding: 50px 55px 50px 45px;
     position: absolute;
     text-align: left;
@@ -399,6 +401,9 @@ p+#close {
 .options img {
     width: 200px;
     height: 200px;
+}
+.options li:hover{
+    color: rgb(212, 62, 62);
 }
 
 #ulList_div>ul>li:hover>.hidden {
@@ -466,7 +471,7 @@ a:hover {
     box-sizing: border-box;
     border: 0px solid rgb(179, 173, 173);
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: white;
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -489,6 +494,9 @@ a:hover {
 
 #inputSearch:focus {
     width: 130px;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 247, 247)
 }
 
 #inputSearch:hover {
@@ -568,8 +576,10 @@ a:hover {
 }
 
 #aboutFaballey p {
-    font-size: 14px;
-    font-weight: lighter;
+    font-size: 12px;
+    display: block;
+    line-height: 20px;
+    font-weight: 500;
 }
 
 /* setion2......__________________ */
@@ -1230,7 +1240,7 @@ iframe {
     }
 
     #ulList_div {
-        width: 300%;
+        width: 100%;
     }
 
     #searchIcon {

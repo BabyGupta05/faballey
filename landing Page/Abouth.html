@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abouth us</title>
-    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="index.css">
     <style>
         body{
             font-family: "lato",sans-serif;
@@ -91,9 +91,7 @@
 </head>
 
 <body>
-    <nav>
-
-    </nav>
+    <div id="navbar"></div>
     
     <main>
     <h1 id="topic">About Us</h1>
@@ -179,9 +177,9 @@
 </main>
 </body>
 <script type="module">
-    import navbar from "../Navbar/navbar.js"
+    import navbar from "navbar.js"
     console.log(navbar())
-    document.querySelector("nav").innerHTML = navbar()
+    document.getElementById("navbar").innerHTML = navbar()
 </script>
 
 </html>

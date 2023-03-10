@@ -11,3 +11,7 @@
 //         console.log(error)
 //     }
 // }
+
+import navbar from "../Navbar/navbar.js"
+
+document.querySelector("navbar").innerHTML=navbar();
