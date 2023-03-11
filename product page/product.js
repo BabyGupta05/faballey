@@ -10,6 +10,10 @@ document.getElementById('footer').innerHTML = footer();
 let itemcount= document.querySelector(".count");
 let getcartitem= JSON.parse(localStorage.getItem("mycart"))  || [];
 
+document.getElementById('imgLogo').onclick =()=>{
+  location.href = "/index.html"
+}
+
 console.log(getcartitem.length)
 
 if(getcartitem.length==0){

@@ -30,7 +30,7 @@
               <a id="contact-link" href="./ContactUs.html"><i class="fa fa-headset"></i> Contact Us</a>
             </li>
             <li>
-              <a id="profile-log" href=""
+              <a id="profile-log"
                 ><i class="fa fa-arrow-right-from-bracket"></i> Logout</a
               >
             </li>

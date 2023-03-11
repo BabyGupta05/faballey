@@ -427,8 +427,8 @@ p+#close {
 #pop2 img,
 #pop3 img,
 #pop10 img {
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    /* height: 300px; */
 }
 
 #pop1 div,
@@ -440,7 +440,7 @@ p+#close {
 
 #pop5 div img,
 #pop6 div img {
-    width: 100%;
+    /* width: 70%; */
     height: 300px;
 }
 

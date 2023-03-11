@@ -109,7 +109,8 @@ async function getUser(){
     // console.log(userArr.cart);
     localStorage.setItem("mycart", JSON.stringify(userArr.cart))
     // console.log(proctArray, "inside get")
-    document.getElementById('custname').textContent = userArr.firstName + userArr.lastName || "User";
+    localStorage.setItem('usernamefab', `${userArr.firstName}  ${userArr.lastName}` )
+    document.getElementById('custname').textContent = userArr.firstName +" "+ userArr.lastName || "User";
   } catch (error) {
     console.log(error)
   }
@@ -180,7 +181,9 @@ console.log(proctArray,"outside")
 //   getUser();
 // }
 
-
+document.getElementById('cart-nav-logo').onclick = ()=>{
+  location.href="/index.html"
+}
 
 
 function displayCart(temp) {

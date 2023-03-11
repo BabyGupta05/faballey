@@ -366,6 +366,8 @@ if (log_status) {
       }
       else if(value == "logout"){
         logout();
+        localStorage.setItem('mycart', JSON.stringify([]));
+            window.location.href="index.html"
       }
       console.log("profile path")
     }

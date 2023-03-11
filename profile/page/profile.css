@@ -148,6 +148,15 @@
     overflow: hidden;
   }
 
+.dob-select select{
+  width: 30%;
+  padding: 0.5rem;
+  margin: auto;
+  border: 1px solid rgb(235, 233, 233);
+  outline: transparent;
+  /* margin: 0.5rem; */
+}
+
   .button-section> button:hover{
     cursor: pointer;
   }
@@ -179,6 +188,9 @@
     border: 1px solid #f2f2f2;
     width: 89.5%;
   }
+
+  /* #dob */
+
   .gender-section{
     padding: 15px;
     margin:10px ;

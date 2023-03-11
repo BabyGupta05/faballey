@@ -1,7 +1,7 @@
 function navbar(){
     return `<div id="navbar-child">
     <div id="child1">
-       <img src="https://www.faballey.com/images/logo.png" onclick="homego()" alt="">
+       <img src="https://www.faballey.com/images/logo.png" id="cart-nav-logo" alt="">
     </div>
     <div id="child2">
        <div class="top-bag" id="bag-navbar">

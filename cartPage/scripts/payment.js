@@ -113,3 +113,7 @@ document.querySelector(".btn-payment").onclick = ()=>{
     }
 
 }
+
+
+var user1name=localStorage.getItem("usernamefab") ||"User"
+document.getElementById("custname").innerText=user1name

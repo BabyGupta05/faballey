@@ -10,6 +10,10 @@ link.style.color="#FF8BA5"
 let user_id = localStorage.getItem("logged") || 1;
 let url=`https://test-api-y3sx.onrender.com/users/${user_id}`;
 
+document.getElementById('wish-back-to-home').addEventListener('click', backToHome);
+function backToHome(){
+  location.href="/index.html"
+}
 
 let WishListBag=JSON.parse(localStorage.getItem("mywishlistcart")) || [];
 let cart=JSON.parse(localStorage.getItem("mycart")) || [];

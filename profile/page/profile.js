@@ -57,8 +57,11 @@ if (log_status) {
 
 document.getElementById("profile-log").onclick = ()=>{
   logout();
-  localStorage.setItem('mycart', JSON.stringify([]));
-  window.location.href="/index.html"
+  
+}
+
+document.querySelector(".add-to-logo").onclick = ()=>{
+  window.location.href="/cartPage/html/cart.html";
 }
 // logout
 function logout() {
@@ -90,6 +93,8 @@ function logout() {
             console.log(error);
           }
         }
+        localStorage.setItem('mycart', JSON.stringify([]));
+         window.location.href="/index.html"
 }
 
 

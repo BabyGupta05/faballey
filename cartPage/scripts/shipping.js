@@ -115,7 +115,7 @@ document.getElementById("adressform").addEventListener("submit",addressfill)
         //username 
 
 
-var naaaaame = "user"
-localStorage.setItem("usernamefab",JSON.stringify(naaaaame))
-var user1name=JSON.parse(localStorage.getItem("usernamefab"))||"User"
+// var naaaaame = "user"
+// localStorage.setItem("usernamefab",JSON.stringify(naaaaame))
+var user1name=localStorage.getItem("usernamefab") ||"User"
 document.getElementById("custname").innerText=user1name
