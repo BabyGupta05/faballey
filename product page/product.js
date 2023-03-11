@@ -1,4 +1,27 @@
 // let api=;
+import navbar from "../Navbar/navbar.js";
+import footer from "../FOOTER/footer.js";
+
+
+document.getElementById('navbar').innerHTML = navbar();
+document.getElementById('footer').innerHTML = footer();
+
+
+let itemcount= document.querySelector(".count");
+let getcartitem= JSON.parse(localStorage.getItem("mycart"))  || [];
+
+console.log(getcartitem.length)
+
+if(getcartitem.length==0){
+  itemcount.innerText= 0;
+}else{
+  itemcount.innerText = getcartitem.length;
+}
+
+document.querySelector(".add-to-logo").onclick = ()=>{
+  location.href="/cartPage/html/cart.html";
+}
+
 
 let user_id = localStorage.getItem("logged") || 1 ;
 async function fetchData(url){
@@ -198,7 +221,7 @@ async function wishList(elem, index) {
   let wishList= await getWish();
   // console.log(cart)
   
-  localStorage.setItem("mycart", JSON.stringify(wishList));
+  localStorage.setItem("mywishlistcart", JSON.stringify(wishList));
 
   // check duplicate
 let c=0;

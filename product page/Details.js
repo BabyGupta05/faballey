@@ -1,3 +1,21 @@
+import navbar from "../Navbar/navbar.js";
+import footer from "../FOOTER/footer.js";
+
+
+document.getElementById('navbar').innerHTML = navbar();
+document.getElementById('footer').innerHTML = footer();
+
+let itemcount= document.querySelector(".count");
+let getcartitem= JSON.parse(localStorage.getItem("mycart"))  || [];
+
+console.log(getcartitem.length)
+
+if(getcartitem.length==0){
+  itemcount.innerText= 0;
+}else{
+  itemcount.innerText = getcartitem.length;
+}
+
 let id=localStorage.getItem("product-id")||"";
 console.log(id)
 let user_id = localStorage.getItem("logged") || 1 ;

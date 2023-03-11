@@ -1,4 +1,5 @@
 import { navbar, footer } from "./navbar.js";
+// import navbar from "../../Navbar/navbar.js";
 
 document.getElementById('navbar').innerHTML = navbar();
 document.getElementById('footer').innerHTML = footer();
@@ -11,7 +12,7 @@ document.getElementById('bag-navbar').addEventListener('click',()=>{
 })
 
 
-let id = 1;
+let id = localStorage.getItem('logged') | "";
 
 // let Procuctsssarray = JSON.parse(localStorage.getItem("mycart")) || [];
 let temp = [{
@@ -108,6 +109,7 @@ async function getUser(){
     // console.log(userArr.cart);
     localStorage.setItem("mycart", JSON.stringify(userArr.cart))
     // console.log(proctArray, "inside get")
+    document.getElementById('custname').textContent = userArr.firstName + userArr.lastName || "User";
   } catch (error) {
     console.log(error)
   }

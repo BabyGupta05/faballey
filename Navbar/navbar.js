@@ -18,11 +18,11 @@ function navbar(){
                 <a href="#" class="link">Track Order</a>
                 <a href="StoreLocator.html" class="link">| Store Locator</a>
                 <div id="login_box">
-                    <div><a href="login.html" class="link">| Login</a></div>
+                    <div><a href="Login.js" class="link">| Login</a></div>
                     <div><a href="signup.html" class="link">| Sign up</a></div>
                 </div>
 
-                <a href="addToCart.html">| <img class="add-to-logo"
+                <a href="#">| <img class="add-to-logo"
                         src="https://img.icons8.com/ios/50/000000/shopping-bag--v1.png" /></a>
                 <div class="count">0</div>
             </div>
@@ -33,7 +33,7 @@ function navbar(){
         <div id="second_navbar">
             <div id="firstOf_secondnavbar">
                 <div id="logo4">
-                    <a href="##"> <img src="https://static.faballey.com/images/logo.png?v=11.11" alt=""
+                    <a href="#"> <img src="https://static.faballey.com/images/logo.png?v=11.11" alt=""
                             id="imgLogo"></a>
                 </div>
 

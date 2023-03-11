@@ -12,6 +12,12 @@
 //     }
 // }
 
-import navbar from "../Navbar/navbar.js"
+import navbar from "./Navbar/navbar.js"
+import footer from "./FOOTER/footer.js";
 
-document.querySelector("navbar").innerHTML=navbar();
+document.querySelector("#navbar").innerHTML=navbar();
+document.querySelector("#footer").innerHTML=footer();
+
+document.getElementById("imgLogo").onclick = ()=>{
+    location.href = "index.html"
+}

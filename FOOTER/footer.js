@@ -128,10 +128,10 @@ function footer(){
                     <h4>COMPANY</h4>
                 </div>
                 <div id="company_head_detail">
-                    <p><a href="##">About Us</a></p>
+                    <p><a href="Abouth.html">About Us</a></p>
                     <p><a href="##">Careers</a></p>
                     <p><a href="##">Contact Us</a></p>
-                    <p><a href="##">FabAlley CSR</a></p>
+                    <p><a href="CSR.html">FabAlley CSR</a></p>
                     <p><a href="##">Gift Cards</a></p>
                 </div>
 

@@ -96,15 +96,17 @@ slideInterval = setInterval(showSlides, 5000);
 // ____________________________cart no._updating cart length____________________________//
 
 
-function showCartItem(){
-let itemcount= document.getElementById("count");
-let getcartitem= localStorage.getItem("cart") ||[];
+// function showCartItem(){
+// }
+let itemcount= document.querySelector(".count");
+let getcartitem= JSON.parse(localStorage.getItem("mycart"))  || [];
+
+console.log(getcartitem.length)
 
 if(getcartitem.length==0){
-  itemcount.innerText=0;
+  itemcount.innerText= 0;
 }else{
-  itemcount.innerText= getcartitem.length;
-}
+  itemcount.innerText = getcartitem.length;
 }
 
 // ______________________newsletter________________//
@@ -121,6 +123,7 @@ var text = document.getElementById("input_email").value;
 }
 
 // ____________________________________search Query________________________//
+// ___________________________________search Query_______________________//
 
 let search_input= document.getElementById("inputSearch");
 
@@ -148,11 +151,19 @@ async function getSuggestions(searchWord) {
         let data = await getData();
         console.log(data.length)
 
-        if (data.Response === 'True') {
+        if (data.length !== 0) {
+          console.log("dropdownsjjshsi");
             let dropdown = document.getElementById("dropdown");
             dropdown.innerHTML = "";
             data.map((product) => {
                 let option = document.createElement("option");
+
+                search_input.addEventListener("keypress",(event)=>{
+                  if(event.key === "Enter"){
+                    localStorage.setItem("product-id", product.id);
+                    location.href = "./product page/Details.html"
+                  }
+                }) 
                 option.setAttribute("class", "option__option")
                 console.log(product+"pro");
                 option.value = product.title;
@@ -163,7 +174,7 @@ async function getSuggestions(searchWord) {
 
             })
         } else {
-            console.log(data.Error);
+           alert("No such product Found")
         }
     } catch (error) {
         console.log(error);
@@ -191,9 +202,10 @@ async function init() {
         let data = await getData();
         let search_word = document.getElementById("inputSearch").value;
         if (!search_word) {
-            let dropdown = document.getElementById("dropdown");
-            dropdown.innerHTML = "No such Product";
-            console.log("dropdown")
+          console.log("dropdown......");
+            // let dropdown = document.getElementById("dropdown");
+            // dropdown.innerHTML = "No such Product";
+            // console.log("dropdown");
         }
     } catch (error) {
         console.log(error);

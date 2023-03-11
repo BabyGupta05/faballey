@@ -108,6 +108,13 @@ body {
     margin: 0px 3px;
 }
 
+#login_box{
+    display: flex;
+}
+#login_box select:focus{
+    border: none;
+    outline: none;
+}
 
 
 /* _________________login CSS_____________ */
@@ -289,7 +296,7 @@ p+#close {
     top: 50%;
     left: 50%;
     box-sizing: border-box;
-    z-index: 9;
+    z-index: 20;
     /* border-radius: 5px; */
     transform: translate(-50%, -50%);
 }
@@ -408,10 +415,12 @@ p+#close {
 
 #ulList_div>ul>li:hover>.hidden {
     display: block;
+    /* z-index: 60; */
 }
 
 #ulList_div>ul>li:hover>.options {
     display: flex;
+    /* z-index: 1; */
 }
 
 #pop1 img,
@@ -520,7 +529,7 @@ a:hover {
         }
         #dropdown{
             width: 500px;
-            background-color: white;
+            background: rgb(232, 232, 232);
         }
 
 /* _________________________________________ended Navbar CSS __________________________________________*/

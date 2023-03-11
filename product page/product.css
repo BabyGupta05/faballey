@@ -132,14 +132,18 @@ body{
     height: 618.27px;
     /* line-height: 40px; */
 }
-.img{
-    /* height: 400px; */
-}
 
 #product{
     display: flex;
     flex-direction: column;
 }
+
+body > #footer {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+}
+
 
 #loaddiv{
     display: flex;
