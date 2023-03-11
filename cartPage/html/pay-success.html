@@ -36,8 +36,23 @@
     </div>
 </body>
 </html>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
+        let input ="vpvinu.com@gmail.com" || localStorage.getItem('login')
+        if(input.includes("gmail.com")){
+            alert("Email has been sent to Your Email Id");
+            Email.send({
+            SecureToken: "dc989647-f40e-45dc-b708-b7b85e1361bf",
+            Host: "smtp.elasticemail.com",
+            Username: "vkvinu.com@gmail.com",
+            Password: "ACC273AEBA34E7CF3972E72EE92CDF34107D",
+            To: `${input}`,
+            From: "vkvinu.com@gmail.com",
+            Subject: "Hola! Welcome to FabAlley!",
+    
+            Body: `You Order Was Successfull Order id is #5658764`})
+        }
         setTimeout(()=>{
             window.location.href = "/index.html";
-        },1000)
+        },3000)
     </script>
