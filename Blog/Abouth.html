@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abouth us</title>
+    <link rel="stylesheet" href="./navbar.css">
+    <style>
+        body{
+            font-family: "lato",sans-serif;
+            color: #323232;
+        }
+        main{
+            
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid red; */
+            /* text-align: center; */
+        }
+        #about_us_banner{
+            width: 100%;
+        }
+        #topic{
+            text-align: center;
+            font-size: 40px;
+            /* margin:0px 0px 20px ; */
+            padding:5px 0px ;
+            font-weight: 700;
+        }
+        #brand{
+            width: 95%;
+            /* margin: auto; */
+        }
+       h3{
+            font-size: 30px;
+            padding-bottom: -50px;
+            /* border: 1px solid red; */
+            margin-bottom: -14px;
+        }
+       p{
+            font-size: 16px;
+            line-height: 30px;
+            /* padding-left: 4px; */
+            margin-bottom: 20px;
+        }
+        #a-product{
+            display: flex;
+            align-items: center;
+            margin: 50px 0px;
+            justify-content: space-between;
+        }
+        #a-product>div{
+          width: 50%;
+          /* border: 1px solid yellow; */
+        }
+        #a-product>div img{
+            width: 100%;
+        }
+        #a-product>div:last-child{
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            /* padding: 20px; */
+            /* border: 1px solid blue; */
+        }
+        #pair_banner{
+            display: flex;
+        }
+        #pair_banner img{
+            width: 50%;
+        }
+        #a-fabeAlley, #a-fabeAlley+div{
+        margin:40px 0px;
+        }
+        #our_founder{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #our_founder>div{
+            width: 50%;
+        }
+        #AlleyGals{
+            margin: 50px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+    
+    <main>
+    <h1 id="topic">About Us</h1>
+    <img src="https://img.faballey.com/images/aboutus/aboutmainimg.jpg" id="about_us_banner" alt="">
+    <div  id="brand">
+        <h3>Our Brand</h3>
+        <p>
+            We seek to empower young women all over the country to find their confidence and embrace who they are
+            unrequitedly. FabAlley is a bold, inclusive and fashion-forward brand aimed at arming women with fashion
+            that is an extension of themselves. Every piece we make is an amalgamation of what our customer wants
+            peppered with global influences such as the runways, street style, pop culture and social media – all
+            merging together to create a one-stop-shop that delivers inimitable style for millennials.
+        </p>
+    </div>
+    <!-- our product -->
+    <div id="a-product">
+        <div>
+            <img src="https://img.faballey.com/images/aboutus/aboutproimg.jpg" alt="">
+        </div>
+        <div>
+            <h3>Our Product</h3>
+            <p>We specialize in combining cutting edge fashion with an affordable price tag. All our products are
+                designed in-house by our super talented young team of designers, with our multi-tasking, millennial
+                women customers in mind. We drop more than 100 products a week, making us not simply a fast fashion
+                brand – but a rapid fashion brand.
+                Accredited with the coveted ISO 9001:2015 certification for Quality Management Systems, we promise
+                products that meet the highest international standards of quality and processes.
+                Since empowerment and expression lie at the core of our design philosophy, we have something for
+                everyone! So, whether you like to keep one step ahead of trends or perfect your signature style, we’re
+                sure we’ve got something you’ll love. We have two major product lines, covering the gamut of occasions
+                and needs that every Indian woman has.</p>
+        </div>
+    </div>
+
+    <!--pair banner -->
+    <div id="pair_banner">
+        <img src="https://img.faballey.com/images/aboutus/aboutimg1.jpg" alt="">
+        <img src="https://img.faballey.com/images/aboutus/aboutimg2.jpg" alt="">
+    </div>
+
+    <!-- fabeAlley  -->
+
+    <div id="a-fabeAlley">
+        <h3>FabAlley</h3>
+        <p>
+            The mother-ship! Inspired by global trends and celeb style, FabAlley is our western wear brand. It covers
+            everything from the glitziest party dresses, game-changing tops and statement accessories.
+        </p>
+    </div>
+
+    <!-- curve -->
+    <div>
+        <h3>Curve</h3>
+        <p>We believe sexiness knows no size and our Curve line delivers on that philosophy. With sizes ranging from 14
+            to 20, the Curve collection brings FabAlley’s signature bold and breezy style to Curvy ladies.</p>
+    </div>
+
+    <!-- our founder -->
+    <div id="our_founder">
+        <img src="https://img.faballey.com/images/aboutus/aboutfounder.jpg" alt="">
+        <div>
+            <h3>Our Founders</h3>
+            <p>
+                FabAlley was started in 2012 by Tanvi Malik and Shivani Poddar. Armed with degrees in business, a
+                passion for product and endless ambition, the two 25-years olds quit their corporate jobs and poured all
+                their personal savings into starting FabAlley six years ago. Fast-forward to present day, they run one
+                of the largest Indian online-led fashion brands and are continuously striving to become better in every
+                aspect.
+            </p>
+        </div>
+    </div>
+
+    <!-- #AlleyGals -->
+    <div id="AlleyGals">
+        <h3>#AlleyGals</h3>
+        <p>
+            Diversity, Relatability and Inclusiveness lie at the heart of our brand. We believe in empowering real women
+            and inspiring a new generation of girls uninterrupted to be themselves, realize their dreams and dress
+            however they please. Our AlleyGals are our real-world brand ambassadors who represent and inspire our
+            customers from all walks of life.
+        </p>
+    </div>
+</main>
+</body>
+<script type="module">
+    import navbar from "../Navbar/navbar.js"
+    console.log(navbar())
+    document.querySelector("nav").innerHTML = navbar()
+</script>
+
+</html>

@@ -1,0 +1,162 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #323232;
+}
+
+#csr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.top-st {
+    width: 18%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+/* .top-st img{
+    width: 259px;
+    height: 138px;
+
+} */
+
+.tp-banner-box{
+    width: 80%;
+    margin: auto;
+}
+.tp-banner{
+    width: 100%;
+    /* height: 10px; */
+    /* margin: 50px; */
+}
+#csr-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+#csr-container>div {
+    width: 50%;
+}
+
+#csr-container>div>div {
+    width: 90%;
+
+}
+
+#csr-container>div:first-child {
+    border-right: 2px solid #fc6486;
+}
+
+#p-img>img {
+    width: 100%;
+    margin: 40px 0px;
+}
+
+#p1-img>img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#csr-container h3 {
+    margin-top: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#csr-container p {
+    /* border: 1px solid red; */
+    font-size: 17px;
+    display: block;
+    line-height: 25px;
+    margin-top: 40px;
+}
+
+/* right-part */
+
+#csr-container>div:last-child {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#csr-container>#drop {
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+    /* margin: 100px 0px; */
+
+}
+
+#csr-container>#drop img {
+    /* margin: 200px 0px; */
+    /* border: 1px solid red; */
+    margin-left: -15px;
+}
+
+#csr-container>#drop span:first-child img {
+    margin-top: 200px;
+
+}
+
+#csr-container>#drop span:nth-child(2) img {
+    margin-top: 250px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#csr-container>#drop span:nth-child(3) img {
+    margin-top: 280px;
+}
+
+#csr-container>#drop span:nth-child(4) img {
+    margin-top: 347px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+/* guide box */
+#help-guide{
+    width: 80%;
+    margin: auto;
+    border: 1px solid #e9e8e8;
+    background-color: #fbfbfb;
+}
+#help-guide h4{
+font-size: 25px;
+color: #fc6486;
+text-transform: uppercase;
+}
+
+#help-guide>div:first-child{
+    text-align: center;
+}
+#help-guide>div:last-child{
+ display: flex;
+ justify-content: space-around;
+}
+#help-guide>div:last-child>div{
+ width: 40%;
+ padding-bottom: 35px;
+}
+#help-guide>div:last-child h3{
+font-size: 24px;
+padding-bottom:20px;
+}
+#help-guide>div:last-child p{
+    font-size: 17px;
+    line-height: 25px;
+}
+
+@media all and (max-width:700px){
+    #help-guide>div:last-child{
+        display: block;
+       }
+       #help-guide>div:last-child>div{
+         margin: auto;
+         width: 90%;
+       }
+}

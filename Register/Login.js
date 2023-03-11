@@ -1,39 +1,39 @@
 import PassPage from "./otp.js";
 import { otpPage, loginPage } from "./otp.js";
-import navbar from "../Navbar/navbar.js";
+// import navbar from "../Navbar/navbar.js";
 
-document.querySelector("nav").innerHTML = navbar();
+// document.querySelector("nav").innerHTML = navbar();
 
 // Checking login ?
-let log_status = localStorage.getItem("logged") || "";
-console.log(log_status);
-if (log_status) {
-  document.getElementById("login_box").innerHTML = `
-    <select name="" id="profile_dropdown" >
-                 <option value="account"><a href="#">My account</a> </option>
-                 <option value="order"><a href="#">My order</a></option>
-                 <option value="logout">Log out</option>
-               </select>`;
-  document
-    .getElementById("profile_dropdown")
-    .addEventListener("change", logout);
-} else {
-  document.getElementById("login_box").innerHTML = `
-    <a href="#" id="login" class="link">|  Login </a>
-    <a href="#" id="Signup" class="link">|  Sign up </a>`;
-}
+// let log_status = localStorage.getItem("logged") || "";
+// console.log(log_status);
+// if (log_status) {
+//   document.getElementById("login_box").innerHTML = `
+//     <select name="" id="profile_dropdown" >
+//                  <option value="account"><a href="#">My account</a> </option>
+//                  <option value="order"><a href="#">My order</a></option>
+//                  <option value="logout">Log out</option>
+//                </select>`;
+//   document
+//     .getElementById("profile_dropdown")
+//     .addEventListener("change", logout);
+// } else {
+//   document.getElementById("login_box").innerHTML = `
+//     <a href="#" id="login" class="link">|  Login </a>
+//     <a href="#" id="Signup" class="link">|  Sign up </a>`;
+// }
 
 // logout
-function logout() {
-  if (document.getElementById("profile_dropdown")) {
-    console.log("ho....");
-    let value = document.getElementById("profile_dropdown").value;
-    if (value == "logout") {
-      localStorage.setItem("logged", "");
-      // window.location.href="index.html"
-    }
-  }
-}
+// function logout() {
+//   if (document.getElementById("profile_dropdown")) {
+//     console.log("ho....");
+//     let value = document.getElementById("profile_dropdown").value;
+//     if (value == "logout") {
+//       localStorage.setItem("logged", "");
+//       // window.location.href="index.html"
+//     }
+//   }
+// }
 
 let user = [];
 let url = `https://test-api-y3sx.onrender.com/users`;
@@ -44,7 +44,7 @@ async function getdata(url) {
     let res = await fetch(url);
     user = await res.json();
     console.log(user);
-    document.getElementById("login_btn").addEventListener("click", function () {
+    document.getElementById("login").addEventListener("click", function () {
       verify(user);
     });
   } catch (error) {
@@ -100,6 +100,7 @@ function verify(user) {
   }
 
   //////////////////erorr
+  document.getElementById("mail").addEventListener("ke")
 
   //    New User's
   if (c == 0) {
@@ -134,8 +135,8 @@ function verify(user) {
               <p>Hello,</p>
               <p><span> We're thrilled you liked our collection!</span></p>
               <p><span>To make your future shopping experience super quick and easy, we created a FabAlley account for you.</span></p>
-              <p>EMAIL ID: **${input}**</p>
-              <p>PASSWORD: **${password}**</p>
+              <p>EMAIL ID: *${input}*</p>
+              <p>PASSWORD: *${password}*</p>
               <p>This password is auto generated and can be changed by going onto your profile.</p>
               <p>Now while we prep your order, kick back and check out our newest style staples!</p>
             </body>
@@ -144,7 +145,6 @@ function verify(user) {
         if (message == "OK") {
           obj.mail = input;
           obj.Password = password;
-
           // post new user
           user.push(obj);
           postdata(obj);
@@ -241,7 +241,7 @@ function verify(user) {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                  login_status: false,
+                  login_status: true,
                 }),
               }
             );
@@ -269,41 +269,41 @@ function verify(user) {
     }
   }
 
-  if (!log_status) {
-    document.getElementById("close").addEventListener("click", closePopup);
+  // if (!log_status) {
+  //   document.getElementById("close").addEventListener("click", closePopup);
 
-    function closePopup() {
-      document.getElementById("box").style.display = "none";
-    }
+  //   function closePopup() {
+  //     document.getElementById("box").style.display = "none";
+  //   }
 
-    // show
+  //   // show
 
-    document.getElementById("login").addEventListener("click", showPopup);
-    document.getElementById("Signup").addEventListener("click", showPopup);
+  //   document.getElementById("login").addEventListener("click", showPopup);
+  //   document.getElementById("Signup").addEventListener("click", showPopup);
 
-    function showPopup() {
-      document.getElementById("box").style.display = "block";
-    }
-  }
+  //   function showPopup() {
+  //     document.getElementById("box").style.display = "block";
+  //   }
+  // }
 }
 
-if (!log_status) {
-  // close
-  document.getElementById("login_skip").addEventListener("click", closePopup);
-  document.getElementById("close").addEventListener("click", closePopup);
+// if (!log_status) {
+//   // close
+//   document.getElementById("login_skip").addEventListener("click", closePopup);
+//   document.getElementById("close").addEventListener("click", closePopup);
 
-  function closePopup() {
-    document.getElementById("box").style.display = "none";
-    document.querySelector("#ph_number+span").style.display = "none";
-  }
+//   function closePopup() {
+//     document.getElementById("box").style.display = "none";
+//     document.querySelector("#ph_number+span").style.display = "none";
+//   }
 
-  // show
+//   // show
 
-  document.getElementById("login").addEventListener("click", showPopup);
-  document.getElementById("Signup").addEventListener("click", showPopup);
+//   document.getElementById("login").addEventListener("click", showPopup);
+//   document.getElementById("Signup").addEventListener("click", showPopup);
 
-  function showPopup() {
-    document.querySelector("#ph_number+span").style.display = "none";
-    document.getElementById("box").style.display = "block";
-  }
-}
+//   function showPopup() {
+//     document.querySelector("#ph_number+span").style.display = "none";
+//     document.getElementById("box").style.display = "block";
+//   }
+// }
