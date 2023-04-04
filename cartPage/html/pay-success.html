@@ -38,7 +38,7 @@
 </html>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-        let input ="vpvinu.com@gmail.com" || localStorage.getItem('login')
+        let input =localStorage.getItem('login') || "vpvinu.com@gmail.com" 
         if(input.includes("gmail.com")){
             alert("Email has been sent to Your Email Id");
             Email.send({

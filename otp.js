@@ -1,7 +1,7 @@
 function PassPage(){
     return ` <div id="login_popup" class="otp">
     <h3>WELCOME BACK</h3>
-    <P ><span id="mail">masai@gmail.com </span><a href="Login.html"> change</a></P>
+    <P ><span id="mail">masai@gmail.com </span><a href="/index.html"> change</a></P>
     <p id="close">&times;</p>
     <span style="display:none" id="mail_sent">Succefully Registerd,<br>Temporary Password sent to registred Email</span>
      <input type="password" placeholder="Password" id="OTP">

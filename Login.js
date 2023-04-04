@@ -467,7 +467,6 @@ function verify(user) {
 
   let c = 0;
   if (input.includes("@gmail.com") || Number.parseInt(input)) {
-    console.log(user);
     // check existing customer
     user.filter(function (ele) {
       if (ele.mail == input || ele.ph == input) {
@@ -478,6 +477,9 @@ function verify(user) {
         return;
       }
     });
+  }else if(input.length<9){
+       document.querySelector("#ph_number+span").style.display="flex"
+       return;
   }
 
   //////////////////erorr
@@ -586,6 +588,8 @@ function verify(user) {
       document.getElementById("mail").textContent = `+91 ${input}`;
       alert(`Your OTP is: - ${Otp}`);
       wrong_cred.style.display = "none";
+    }else{
+      alert("wrong creditional..!")
     }
   } else {
     wrong_cred.style.display = "block";
@@ -604,7 +608,6 @@ function verify(user) {
     console.log(user,"passvalid....");
 
     user.map(function (ele) {
-      console.log(ele.id);
       if ( (ele.mail == input && ele.Password == enterd_pass) || (ele.ph == input && ele.Password == enterd_pass) ) {
         console.log("succfull login...", ele.Password, enterd_pass);
         flag = true;
