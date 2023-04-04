@@ -1,9 +1,13 @@
+import navbar from "../../Navbar/navbar.js";
+
+document.getElementById("navbar").innerHTML = navbar();
 
 // activate menu link
 let allLink=document.querySelector("a");
 allLink.style.color="#323232;"
 let link=document.getElementById("address-link");
 link.style.color="#FF8BA5"
+console.log("hfduhs");
 
 // Show_Adress form_____-_____-
 document.getElementById("add-Address").addEventListener("click",() => {

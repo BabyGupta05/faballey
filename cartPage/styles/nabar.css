@@ -38,6 +38,7 @@ body {
   }
 
   #child3{
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: baseline;

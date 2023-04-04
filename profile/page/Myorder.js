@@ -1,5 +1,9 @@
 import {menu} from "../component/profileMenu.js";
+import navbar from "../../Navbar/navbar.js";
 // console.log(menu());
+
+document.getElementById("navbar").innerHTML = navbar();
+
 document.querySelector(".profile-left-section").innerHTML=menu();
 
 // activate menu link

@@ -87,6 +87,10 @@ body{
     height: 450px;
 }
 #sale{
+    /* width: 60%; */
+    /* position; */
+    /* border: 1px solid; */
+        /* position:fixed; */
     width: 14%;
     margin-top: 60px;
     font-family :- Lato, sans-serif
@@ -268,9 +272,9 @@ body > #footer {
         margin-left: 30px;
         margin-top: 20px;
     }
-    #sale{
-        width: 60%;
-    }
+    /* #sale{
+        
+    } */
     #sorting-div > div p{
         display: none;
     }
@@ -302,9 +306,9 @@ body > #footer {
         margin-left: 30px;
         margin-top: 20px;
     }
-    #sale{
-        width: 60%;
-    }
+    /* #{
+       sale width: 60%;
+    } */
     #sorting-div > div p{
         display: none;
     }

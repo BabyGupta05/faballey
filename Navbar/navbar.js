@@ -33,7 +33,7 @@ function navbar(){
         <div id="second_navbar">
             <div id="firstOf_secondnavbar">
                 <div id="logo4">
-                    <a href="#"> <img src="https://static.faballey.com/images/logo.png?v=11.11" alt=""
+                    <a href="/index.html"> <img src="https://static.faballey.com/images/logo.png?v=11.11" alt=""
                             id="imgLogo"></a>
                 </div>
 

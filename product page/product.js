@@ -289,9 +289,9 @@ function funcv(){
 }
 
 
-function func(){
-      fetchData(`https://test-api-y3sx.onrender.com/products?_limit=27&_sort=color&_color=black`)
-}
+// function func(){
+//       fetchData(`https://test-api-y3sx.onrender.com/products?_limit=27&_sort=color&_color=black`)
+// }
 
 document.getElementById("under999").addEventListener("click",func999);
 

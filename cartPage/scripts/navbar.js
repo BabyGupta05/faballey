@@ -21,10 +21,11 @@ function navbar(){
        </div>
     </div>
 
-    <div id="child3">
+    <a id="child3" href="/profile/page/profile.html">
+    
         <i class="fa fa-user"></i>
-       <p class="username-navbar">Hi, <span id="custname"> User </span></p>
-    </div>
+       <p class="username-navbar">Hi, <span id="custname"> User </span></p>   
+    </a>
  </div>`
 }
 

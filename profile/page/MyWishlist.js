@@ -1,4 +1,8 @@
 import {menu} from "../component/profileMenu.js";
+import navbar from "../../Navbar/navbar.js";
+
+document.getElementById("navbar").innerHTML = navbar();
+
 // console.log(menu());
 document.querySelector(".profile-left-section").innerHTML=menu();
 

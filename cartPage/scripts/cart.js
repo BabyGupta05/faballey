@@ -109,8 +109,9 @@ async function getUser(){
     // console.log(userArr.cart);
     localStorage.setItem("mycart", JSON.stringify(userArr.cart))
     // console.log(proctArray, "inside get")
-    localStorage.setItem('usernamefab', `${userArr.firstName}  ${userArr.lastName}` )
-    document.getElementById('custname').textContent = userArr.firstName +" "+ userArr.lastName || "User";
+    localStorage.setItem('usernamefab', `${userArr.firstName}`||"" )
+    // console.log( "inside cart" , `${userArr.firstName}  ${userArr.lastName}`)
+    document.getElementById('custname').textContent = userArr.firstName|| "User";
   } catch (error) {
     console.log(error)
   }
